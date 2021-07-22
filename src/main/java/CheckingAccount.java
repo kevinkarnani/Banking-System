@@ -1,5 +1,6 @@
 public class CheckingAccount extends Account {
     public CheckingAccount(double apr) {
-        super(apr);
+        this.amount = 0;
+        this.apr = apr;
     }
 }

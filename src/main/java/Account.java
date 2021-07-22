@@ -1,16 +1,6 @@
-public class Account {
+public abstract class Account {
     protected double amount;
     protected double apr;
-
-    public Account(double amount, double apr) {
-        this.amount = amount;
-        this.apr = apr;
-    }
-
-    public Account(double apr) {
-        this.amount = 0;
-        this.apr = apr;
-    }
 
     public void deposit(double amount) {
         this.amount += amount;
