@@ -51,6 +51,11 @@ public class DepositValidatorTest {
 
     @Test
     public void deposit_invalid_amount() {
+        assertFalse(this.commandValidator.validate("deposit 12345678 10e5"));
+    }
+
+    @Test
+    public void deposit_negative_amount() {
         assertFalse(this.commandValidator.validate("deposit 12345678 -1"));
     }
 
