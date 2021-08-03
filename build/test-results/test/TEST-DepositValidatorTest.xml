@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DepositValidatorTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2021-08-03T23:43:46" hostname="Kevins-MacBook-Pro.local" time="0.071">
+  <properties/>
+  <testcase name="deposit_checking_case_insensitive()" classname="DepositValidatorTest" time="0.031"/>
+  <testcase name="deposit_invalid_amount()" classname="DepositValidatorTest" time="0.004"/>
+  <testcase name="deposit_invalid_id()" classname="DepositValidatorTest" time="0.001"/>
+  <testcase name="deposit_invalid_deposit()" classname="DepositValidatorTest" time="0.001"/>
+  <testcase name="deposit_cd()" classname="DepositValidatorTest" time="0.001"/>
+  <testcase name="deposit_savings()" classname="DepositValidatorTest" time="0.005"/>
+  <testcase name="deposit_nonexistent_account()" classname="DepositValidatorTest" time="0.003"/>
+  <testcase name="deposit_savings_above_max()" classname="DepositValidatorTest" time="0.001"/>
+  <testcase name="deposit_missing_id()" classname="DepositValidatorTest" time="0.001"/>
+  <testcase name="deposit_missing_amount()" classname="DepositValidatorTest" time="0.0"/>
+  <testcase name="deposit_missing_deposit()" classname="DepositValidatorTest" time="0.004"/>
+  <testcase name="deposit_checking()" classname="DepositValidatorTest" time="0.003"/>
+  <testcase name="deposit_checking_above_max()" classname="DepositValidatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
