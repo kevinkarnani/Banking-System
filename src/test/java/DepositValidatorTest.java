@@ -9,7 +9,6 @@ public class DepositValidatorTest {
     public CommandValidator commandValidator;
     public Bank bank;
 
-
     @BeforeEach
     public void setUp() {
         this.bank = new Bank();
@@ -27,6 +26,11 @@ public class DepositValidatorTest {
     @Test
     public void deposit_checking_case_insensitive() {
         assertTrue(this.commandValidator.validate("DePoSiT 12345678 100"));
+    }
+
+    @Test
+    public void deposit_checking_with_decimals() {
+        assertTrue(this.commandValidator.validate("deposit 12345678 100.1"));
     }
 
     @Test

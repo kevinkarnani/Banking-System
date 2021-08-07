@@ -10,13 +10,11 @@ public class CreateValidator extends CommandValidator {
         int len = 4;
         command = command.toLowerCase();
         String[] words = command.split("\\s+");
-        ArrayList<String> accountTypes = new ArrayList<>() {
-            {
-                add("savings");
-                add("checking");
-                add("cd");
-            }
-        };
+        ArrayList<String> accountTypes = new ArrayList<>();
+
+        accountTypes.add("savings");
+        accountTypes.add("checking");
+        accountTypes.add("cd");
 
         if (command.contains("cd")) {
             len = 5;

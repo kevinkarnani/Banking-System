@@ -25,6 +25,11 @@ public class CreateValidatorTest {
     }
 
     @Test
+    public void create_savings_empty_zero_not_appended() {
+        assertTrue(this.commandValidator.validate("CrEaTe SaViNgS 12345678 .6"));
+    }
+
+    @Test
     public void create_checking_empty() {
         assertTrue(this.commandValidator.validate("Create checking 12345678 0.01"));
     }
@@ -74,6 +79,24 @@ public class CreateValidatorTest {
     }
 
     @Test
+    public void create_savings_already_exists() {
+        bank.createSavingsAccount(12345678, 0.1);
+        assertFalse(this.commandValidator.validate("Create savings 12345678 0.6"));
+    }
+
+    @Test
+    public void create_checking_already_exists() {
+        bank.createCheckingAccount(12345678, 0.1);
+        assertFalse(this.commandValidator.validate("Create checking 12345678 0.01"));
+    }
+
+    @Test
+    public void create_cd_already_exists() {
+        bank.createCDAccount(12345678, 2000, 0.1);
+        assertFalse(this.commandValidator.validate("Create cd 12345678 1.2 2000"));
+    }
+
+    @Test
     public void create_savings_over_max_apr() {
         assertFalse(this.commandValidator.validate("Create savings 12345678 11"));
     }
@@ -120,7 +143,7 @@ public class CreateValidatorTest {
 
     @Test
     public void create_savings_missing_account_type() {
-        assertFalse(this.commandValidator.validate("Create 12345678 12345678"));
+        assertFalse(this.commandValidator.validate("Create 12345678 0.1"));
     }
 
     @Test
