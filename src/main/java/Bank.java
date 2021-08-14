@@ -26,4 +26,12 @@ public class Bank {
     public void depositIntoAccount(int uuid, double amount) {
         this.accounts.get(uuid).deposit(amount);
     }
+
+    public boolean accountExists(int uuid) {
+        return this.accounts.containsKey(uuid);
+    }
+
+    public double accountDepositLimit(int uuid) {
+        return this.accounts.get(uuid).maxDeposit;
+    }
 }

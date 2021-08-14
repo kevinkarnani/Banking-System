@@ -1,6 +1,7 @@
 public abstract class Account {
     protected double amount;
     protected double apr;
+    protected double maxDeposit;
 
     public void deposit(double amount) {
         this.amount += amount;
