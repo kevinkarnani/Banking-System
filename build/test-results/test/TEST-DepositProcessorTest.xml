@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DepositProcessorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-08-14T18:12:01" hostname="Kevins-MacBook-Pro.local" time="0.112">
+  <properties/>
+  <testcase name="deposit_checking_case_insensitive()" classname="DepositProcessorTest" time="0.085"/>
+  <testcase name="deposit_checking_with_decimals()" classname="DepositProcessorTest" time="0.003"/>
+  <testcase name="deposit_savings()" classname="DepositProcessorTest" time="0.003"/>
+  <testcase name="deposit_checking()" classname="DepositProcessorTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

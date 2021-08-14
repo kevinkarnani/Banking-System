@@ -12,7 +12,6 @@ public class DepositProcessorTest {
         this.bank = new Bank();
         this.bank.createCheckingAccount(12345678, 0.1);
         this.bank.createSavingsAccount(23456789, 0.1);
-        this.bank.createCDAccount(34567890, 2000, 1);
         this.depositProcessor = new DepositProcessor(this.bank);
     }
 
