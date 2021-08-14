@@ -1,9 +1,10 @@
-public class DepositValidator extends CommandValidator {
+public class DepositValidator {
+    public Bank bank;
+
     public DepositValidator(Bank bank) {
         this.bank = bank;
     }
 
-    @Override
     public boolean validate(String command) {
         command = command.toLowerCase();
         String[] words = command.split("\\s+");

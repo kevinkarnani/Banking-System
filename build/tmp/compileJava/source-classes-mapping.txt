@@ -1,24 +1,26 @@
-SavingsAccount.java
- SavingsAccount
+Bank.java
+ Bank
 Account.java
  Account
 CheckingAccount.java
  CheckingAccount
-Bank.java
- Bank
-CommandStorage.java
- CommandStorage
-CDAccount.java
- CDAccount
-CommandValidator.java
- CommandValidator
 DepositValidator.java
  DepositValidator
 DepositProcessor.java
  DepositProcessor
-CommandProcessor.java
- CommandProcessor
+CDAccount.java
+ CDAccount
 CreateValidator.java
  CreateValidator
+CommandStorage.java
+ CommandStorage
+SavingsAccount.java
+ SavingsAccount
 CreateProcessor.java
  CreateProcessor
+CommandValidator.java
+ CommandValidator
+MasterControl.java
+ MasterControl
+CommandProcessor.java
+ CommandProcessor

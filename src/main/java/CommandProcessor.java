@@ -8,4 +8,13 @@ public class CommandProcessor {
         this.createProcessor = new CreateProcessor(this.bank);
         this.depositProcessor = new DepositProcessor(this.bank);
     }
+
+    public void processCommand(String command) {
+        String[] words = command.toLowerCase().split("\\s+");
+        if (words[0].equals("create")) {
+            this.createProcessor.process(command);
+        } else {
+            this.depositProcessor.process(command);
+        }
+    }
 }
