@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CommandStorageTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-08-14T18:02:08" hostname="Kevins-MacBook-Pro.local" time="0.021">
+  <properties/>
+  <testcase name="one_invalid_command()" classname="CommandStorageTest" time="0.016"/>
+  <testcase name="empty_invalid_command()" classname="CommandStorageTest" time="0.002"/>
+  <testcase name="many_invalid_command()" classname="CommandStorageTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
