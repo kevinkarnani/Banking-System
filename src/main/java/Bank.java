@@ -15,7 +15,7 @@ public class Bank {
         this.accounts.put(uuid, new SavingsAccount(apr));
     }
 
-    public void createCDAccount(int uuid, int amount, double apr) {
+    public void createCDAccount(int uuid, double amount, double apr) {
         this.accounts.put(uuid, new CDAccount(amount, apr));
     }
 
