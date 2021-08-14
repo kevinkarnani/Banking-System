@@ -10,3 +10,5 @@ CreateValidatorTest.java
  CreateValidatorTest
 DepositProcessorTest.java
  DepositProcessorTest
+CommandStorageTest.java
+ CommandStorageTest
