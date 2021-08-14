@@ -9,11 +9,11 @@ public class CreateProcessor {
         String[] words = command.toLowerCase().split("\\s+");
 
         if (words[1].equals("checking")) {
-            this.bank.createCheckingAccount(Integer.parseInt(words[2]), Float.parseFloat(words[3]));
+            this.bank.createCheckingAccount(Integer.parseInt(words[2]), Double.parseDouble(words[3]));
         } else if (words[1].equals("savings")) {
-            this.bank.createSavingsAccount(Integer.parseInt(words[2]), Float.parseFloat(words[3]));
+            this.bank.createSavingsAccount(Integer.parseInt(words[2]), Double.parseDouble(words[3]));
         } else {
-            this.bank.createCDAccount(Integer.parseInt(words[2]), Float.parseFloat(words[4]), Float.parseFloat(words[3]));
+            this.bank.createCDAccount(Integer.parseInt(words[2]), Double.parseDouble(words[4]), Double.parseDouble(words[3]));
         }
     }
 }

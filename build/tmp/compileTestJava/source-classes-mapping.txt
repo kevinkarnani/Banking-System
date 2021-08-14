@@ -2,13 +2,15 @@ BankTest.java
  BankTest
 DepositValidatorTest.java
  DepositValidatorTest
-CreateProcessorTest.java
- CreateProcessorTest
-AccountTest.java
- AccountTest
-CreateValidatorTest.java
- CreateValidatorTest
-CommandStorageTest.java
- CommandStorageTest
 DepositProcessorTest.java
  DepositProcessorTest
+AccountTest.java
+ AccountTest
+CommandStorageTest.java
+ CommandStorageTest
+MasterControlTest.java
+ MasterControlTest
+CreateProcessorTest.java
+ CreateProcessorTest
+CreateValidatorTest.java
+ CreateValidatorTest

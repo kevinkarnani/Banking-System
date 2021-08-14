@@ -22,12 +22,12 @@ public class CreateValidator extends CommandValidator {
 
         boolean flag = words.length == len && words[0].equals("create") && accountTypes.contains(words[1]) && words[2]
                 .matches("\\d+") && words[3].matches("\\d*\\.?\\d+") && words[2].length() == 8 &&
-                !bank.accountExists(Integer.parseInt(words[2])) && Float.parseFloat(words[3]) <= 10 && Float.
-                parseFloat(words[3]) >= 0;
+                !bank.accountExists(Integer.parseInt(words[2])) && Double.parseDouble(words[3]) <= 10 && Double.parseDouble
+                (words[3]) >= 0;
 
         if (len == 5) {
-            flag = flag && words[4].matches("\\d*\\.?\\d+") && Float.parseFloat(words[4]) <= 10000 && Float
-                    .parseFloat(words[4]) >= 1000;
+            flag = flag && words[4].matches("\\d*\\.?\\d+") && Float.parseFloat(words[4]) <= 10000 && Double.parseDouble
+                    (words[4]) >= 1000;
         }
 
         return flag;

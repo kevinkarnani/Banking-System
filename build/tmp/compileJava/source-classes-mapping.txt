@@ -6,19 +6,19 @@ CheckingAccount.java
  CheckingAccount
 Bank.java
  Bank
+CommandStorage.java
+ CommandStorage
+CDAccount.java
+ CDAccount
+CommandValidator.java
+ CommandValidator
 DepositValidator.java
  DepositValidator
 DepositProcessor.java
  DepositProcessor
-CommandValidator.java
- CommandValidator
 CommandProcessor.java
  CommandProcessor
 CreateValidator.java
  CreateValidator
 CreateProcessor.java
  CreateProcessor
-CDAccount.java
- CDAccount
-CommandStorage.java
- CommandStorage
