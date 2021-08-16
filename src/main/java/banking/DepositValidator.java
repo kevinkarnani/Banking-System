@@ -1,3 +1,5 @@
+package banking;
+
 public class DepositValidator extends CommandValidator {
     public DepositValidator(Bank bank) {
         this.bank = bank;
