@@ -1,3 +1,5 @@
+package banking;
+
 public class DepositProcessor {
     public Bank bank;
 
