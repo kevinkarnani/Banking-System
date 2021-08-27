@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="banking.AccountTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-08-27T02:23:47" hostname="Kevins-MacBook-Pro.local" time="0.052">
+  <properties/>
+  <testcase name="default_savings_account_balance()" classname="banking.AccountTest" time="0.027"/>
+  <testcase name="withdraw()" classname="banking.AccountTest" time="0.001"/>
+  <testcase name="withdraw_twice()" classname="banking.AccountTest" time="0.003"/>
+  <testcase name="deposit_twice()" classname="banking.AccountTest" time="0.001"/>
+  <testcase name="default_cd_account_balance()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="deposit()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="withdraw_more_than_balance()" classname="banking.AccountTest" time="0.003"/>
+  <testcase name="default_checking_account_balance()" classname="banking.AccountTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

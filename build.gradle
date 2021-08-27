@@ -39,3 +39,12 @@ pitest {
     junit5PluginVersion = "0.12"
     outputFormats = ['XML', 'HTML']
 }
+pitest {
+    targetClasses = ['banking.*']
+    targetTests = ['banking.*']
+    testSourceSets = [sourceSets.test]
+    mainSourceSets = [sourceSets.main]
+    pitestVersion = '1.5.2'
+    junit5PluginVersion = "0.12"
+    outputFormats = ['XML', 'HTML']
+}

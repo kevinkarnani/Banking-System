@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CreateValidatorTest {
-    public CommandValidator commandValidator;
+    public CreateValidator commandValidator;
     public Bank bank;
 
     @BeforeEach
