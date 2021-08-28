@@ -36,4 +36,11 @@ public class Bank {
     public boolean accountDepositUnderLimit(double amount, int uuid) {
         return this.accounts.get(uuid).validDepositAmount(amount);
     }
+
+    public void passTime(int time) {
+        for (int i = 0; i < time; i++) {
+            this.accounts.entrySet().removeIf(entry -> entry.getValue().amount == 0);
+            this.accounts.forEach((id, account) -> account.passTime());
+        }
+    }
 }

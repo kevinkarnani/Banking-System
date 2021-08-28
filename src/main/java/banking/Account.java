@@ -24,4 +24,15 @@ public abstract class Account {
     public boolean validDepositAmount(double amount) {
         return amount <= this.maxDeposit;
     }
+
+    public void passTime() {
+        if (this.amount < 100) {
+            this.withdraw(25);
+        }
+        this.calculateAPR();
+    }
+
+    public void calculateAPR() {
+        this.amount += (this.apr / 100) / 12 * this.amount;
+    }
 }

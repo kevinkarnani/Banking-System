@@ -195,6 +195,6 @@ public class CreateValidatorTest {
 
     @Test
     public void create_cd_alphanumeric_amount() {
-        assertFalse(this.commandValidator.validate("Create cd 12345678 1.2 1e3"));
+        assertFalse(this.commandValidator.validate("Create cd 12345678 1.2 a3"));
     }
 }
