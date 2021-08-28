@@ -20,4 +20,8 @@ public abstract class Account {
     public double getAmount() {
         return this.amount;
     }
+
+    public boolean validDepositAmount(double amount) {
+        return amount <= this.maxDeposit;
+    }
 }

@@ -33,7 +33,7 @@ public class Bank {
         return this.accounts.containsKey(uuid);
     }
 
-    public double accountDepositLimit(int uuid) {
-        return this.accounts.get(uuid).maxDeposit;
+    public boolean accountDepositUnderLimit(double amount, int uuid) {
+        return this.accounts.get(uuid).validDepositAmount(amount);
     }
 }

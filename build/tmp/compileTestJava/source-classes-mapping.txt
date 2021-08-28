@@ -1,16 +1,16 @@
+banking/CommandStorageTest.java
+ banking.CommandStorageTest
 banking/BankTest.java
  banking.BankTest
-banking/AccountTest.java
- banking.AccountTest
+banking/MasterControlTest.java
+ banking.MasterControlTest
 banking/DepositValidatorTest.java
  banking.DepositValidatorTest
 banking/DepositProcessorTest.java
  banking.DepositProcessorTest
 banking/CreateProcessorTest.java
  banking.CreateProcessorTest
+banking/AccountTest.java
+ banking.AccountTest
 banking/CreateValidatorTest.java
  banking.CreateValidatorTest
-banking/MasterControlTest.java
- banking.MasterControlTest
-banking/CommandStorageTest.java
- banking.CommandStorageTest

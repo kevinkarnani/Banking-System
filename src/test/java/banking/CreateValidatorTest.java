@@ -43,58 +43,78 @@ public class CreateValidatorTest {
 
     @Test
     public void create_savings_one() {
-        bank.createSavingsAccount(12345678, 0.1);
+        this.bank.createSavingsAccount(12345678, 0.1);
         assertTrue(this.commandValidator.validate("Create savings 23456789 0.6"));
     }
 
     @Test
     public void create_checking_one() {
-        bank.createCheckingAccount(12345678, 0.1);
+        this.bank.createCheckingAccount(12345678, 0.1);
         assertTrue(this.commandValidator.validate("Create checking 23456789 0.01"));
     }
 
     @Test
     public void create_cd_one() {
-        bank.createCDAccount(12345678, 2000, 0.1);
+        this.bank.createCDAccount(12345678, 2000, 0.1);
         assertTrue(this.commandValidator.validate("Create cd 23456789 1.2 2000"));
     }
 
     @Test
     public void create_savings_many() {
-        bank.createSavingsAccount(12345678, 0.1);
-        bank.createSavingsAccount(23456789, 0.1);
+        this.bank.createSavingsAccount(12345678, 0.1);
+        this.bank.createSavingsAccount(23456789, 0.1);
         assertTrue(this.commandValidator.validate("Create savings 34567890 0.6"));
     }
 
     @Test
     public void create_checking_many() {
-        bank.createCheckingAccount(12345678, 0.1);
-        bank.createCheckingAccount(23456789, 0.1);
+        this.bank.createCheckingAccount(12345678, 0.1);
+        this.bank.createCheckingAccount(23456789, 0.1);
         assertTrue(this.commandValidator.validate("Create checking 34567890 0.01"));
     }
 
     @Test
     public void create_cd_many() {
-        bank.createCDAccount(12345678, 2000, 0.1);
-        bank.createCDAccount(23456789, 2000, 0.1);
+        this.bank.createCDAccount(12345678, 2000, 0.1);
+        this.bank.createCDAccount(23456789, 2000, 0.1);
         assertTrue(this.commandValidator.validate("Create cd 34567890 1.2 2000"));
     }
 
     @Test
+    public void create_cd_with_1000_is_valid() {
+        assertTrue(this.commandValidator.validate("create cd 12345678 1.2 1000"));
+    }
+
+    @Test
+    public void create_cd_with_10000_is_valid() {
+        assertTrue(this.commandValidator.validate("create cd 12345678 1.2 10000"));
+    }
+
+    @Test
+    public void create_cd_with_10_APR_is_valid() {
+        assertTrue(this.commandValidator.validate("create cd 12345678 10 5000"));
+    }
+
+    @Test
+    public void create_cd_with_0_APR_is_valid() {
+        assertTrue(this.commandValidator.validate("create cd 12345678 0 5000"));
+    }
+
+    @Test
     public void create_savings_already_exists() {
-        bank.createSavingsAccount(12345678, 0.1);
+        this.bank.createSavingsAccount(12345678, 0.1);
         assertFalse(this.commandValidator.validate("Create savings 12345678 0.6"));
     }
 
     @Test
     public void create_checking_already_exists() {
-        bank.createCheckingAccount(12345678, 0.1);
+        this.bank.createCheckingAccount(12345678, 0.1);
         assertFalse(this.commandValidator.validate("Create checking 12345678 0.01"));
     }
 
     @Test
     public void create_cd_already_exists() {
-        bank.createCDAccount(12345678, 2000, 0.1);
+        this.bank.createCDAccount(12345678, 2000, 0.1);
         assertFalse(this.commandValidator.validate("Create cd 12345678 1.2 2000"));
     }
 
@@ -111,6 +131,11 @@ public class CreateValidatorTest {
     @Test
     public void create_savings_invalid_id() {
         assertFalse(this.commandValidator.validate("Create savings 1 0.6"));
+    }
+
+    @Test
+    public void create_savings_alphanumeric_id() {
+        assertFalse(this.commandValidator.validate("Create savings 1234567a 0.6"));
     }
 
     @Test
@@ -166,5 +191,10 @@ public class CreateValidatorTest {
     @Test
     public void create_cd_under_min_initial() {
         assertFalse(this.commandValidator.validate("Create cd 12345678 1.2 100"));
+    }
+
+    @Test
+    public void create_cd_alphanumeric_amount() {
+        assertFalse(this.commandValidator.validate("Create cd 12345678 1.2 1e3"));
     }
 }

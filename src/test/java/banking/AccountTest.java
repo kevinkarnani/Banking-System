@@ -46,10 +46,28 @@ public class AccountTest {
     }
 
     @Test
+    public void deposit_1000_into_checking_is_valid() {
+        this.checkingAccount.deposit(1000);
+        assertEquals(this.checkingAccount.getAmount(), 1000);
+    }
+
+    @Test
+    public void deposit_2500_into_savings_is_valid() {
+        this.savingsAccount.deposit(2500);
+        assertEquals(this.savingsAccount.getAmount(), 2500);
+    }
+
+    @Test
     public void withdraw() {
         this.savingsAccount.deposit(100);
         this.savingsAccount.withdraw(70);
         assertEquals(this.savingsAccount.getAmount(), 30);
+    }
+
+    @Test
+    public void withdraw_zero_is_valid() {
+        this.checkingAccount.withdraw(0);
+        assertEquals(this.checkingAccount.getAmount(), 0);
     }
 
     @Test
