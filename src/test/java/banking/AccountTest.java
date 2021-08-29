@@ -3,7 +3,7 @@ package banking;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AccountTest {
     public Account checkingAccount;
@@ -83,5 +83,37 @@ public class AccountTest {
         this.checkingAccount.withdraw(50);
         this.checkingAccount.withdraw(20);
         assertEquals(this.checkingAccount.getAmount(), 30);
+    }
+
+    @Test
+    public void withdraw_below_0_ends_in_0() {
+        this.checkingAccount.withdraw(100);
+        assertEquals(this.checkingAccount.getAmount(), 0);
+    }
+
+    @Test
+    public void withdraw_0_is_valid() {
+        this.checkingAccount.withdraw(0);
+        assertEquals(this.checkingAccount.getAmount(), 0);
+    }
+
+    @Test
+    public void checking_max_deposit_is_1000() {
+        assertTrue(this.checkingAccount.validDepositAmount(1000));
+    }
+
+    @Test
+    public void savings_max_deposit_is_2500() {
+        assertTrue(this.savingsAccount.validDepositAmount(2500));
+    }
+
+    @Test
+    public void checking_over_max_deposit_is_invalid() {
+        assertFalse(this.checkingAccount.validDepositAmount(10000));
+    }
+
+    @Test
+    public void savings_over_max_deposit_is_invalid() {
+        assertFalse(this.checkingAccount.validDepositAmount(10000));
     }
 }

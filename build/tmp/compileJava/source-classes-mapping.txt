@@ -1,30 +1,36 @@
 banking/CommandStorage.java
  banking.CommandStorage
-banking/PassTimeValidator.java
- banking.PassTimeValidator
-banking/PassTimeProcessor.java
- banking.PassTimeProcessor
-banking/DepositValidator.java
- banking.DepositValidator
+banking/CheckingAccount.java
+ banking.CheckingAccount
+banking/Account.java
+ banking.Account
+banking/SavingsAccount.java
+ banking.SavingsAccount
 banking/CDAccount.java
  banking.CDAccount
+banking/Processor.java
+ banking.Processor
+banking/PassTimeProcessor.java
+ banking.PassTimeProcessor
+banking/MasterControl.java
+ banking.MasterControl
+banking/CommandProcessor.java
+ banking.CommandProcessor
 banking/Bank.java
  banking.Bank
 banking/DepositProcessor.java
  banking.DepositProcessor
 banking/CreateProcessor.java
  banking.CreateProcessor
-banking/SavingsAccount.java
- banking.SavingsAccount
+banking/PassTimeValidator.java
+ banking.PassTimeValidator
+banking/Validator.java
+ banking.Validator
 banking/CommandValidator.java
  banking.CommandValidator
+banking/DepositValidator.java
+ banking.DepositValidator
+banking/CDCreateValidator.java
+ banking.CDCreateValidator
 banking/CreateValidator.java
  banking.CreateValidator
-banking/CheckingAccount.java
- banking.CheckingAccount
-banking/Account.java
- banking.Account
-banking/MasterControl.java
- banking.MasterControl
-banking/CommandProcessor.java
- banking.CommandProcessor

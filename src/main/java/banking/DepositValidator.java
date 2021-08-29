@@ -1,12 +1,11 @@
 package banking;
 
-public class DepositValidator {
-    public Bank bank;
-
+public class DepositValidator extends Validator {
     public DepositValidator(Bank bank) {
         this.bank = bank;
     }
 
+    @Override
     public boolean validate(String command) {
         command = command.toLowerCase();
         String[] words = command.split("\\s+");

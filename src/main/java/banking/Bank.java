@@ -4,6 +4,10 @@ import java.util.HashMap;
 
 public class Bank {
     public HashMap<Integer, Account> accounts;
+    public int minCDAmount = 1000;
+    public int maxCDAmount = 10000;
+    public int minAPR = 0;
+    public int maxAPR = 10;
 
     public Bank() {
         this.accounts = new HashMap<>();
@@ -39,8 +43,16 @@ public class Bank {
 
     public void passTime(int time) {
         for (int i = 0; i < time; i++) {
-            this.accounts.entrySet().removeIf(entry -> entry.getValue().amount == 0);
+            this.accounts.entrySet().removeIf(entry -> entry.getValue().getAmount() == 0);
             this.accounts.forEach((id, account) -> account.passTime());
         }
+    }
+
+    public boolean validateInitialCDAmount(double amount) {
+        return this.minCDAmount <= amount && amount <= this.maxCDAmount;
+    }
+
+    public boolean validateInitialAPR(double apr) {
+        return this.minAPR <= apr && apr <= this.maxAPR;
     }
 }

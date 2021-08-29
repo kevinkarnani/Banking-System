@@ -60,6 +60,16 @@ public class MasterControlTest {
         assertSingleCommand("create checking 12345678 1.0", actual);
     }
 
+    @Test
+    public void valid_commands_return_empty() {
+        this.input.add("create checking 12345678 1.0");
+        this.input.add("deposit 12345678 100");
+        this.input.add("pass 1");
+
+        List<String> actual = this.masterControl.start(this.input);
+        assertEquals(actual.size(), 0);
+    }
+
     private void assertSingleCommand(String command, List<String> actual) {
         assertEquals(actual.size(), 1);
         assertEquals(actual.get(0), command);

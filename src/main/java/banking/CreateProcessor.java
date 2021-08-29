@@ -1,12 +1,11 @@
 package banking;
 
-public class CreateProcessor {
-    public Bank bank;
-
+public class CreateProcessor extends Processor {
     public CreateProcessor(Bank bank) {
         this.bank = bank;
     }
 
+    @Override
     public void process(String command) {
         String[] words = command.toLowerCase().split("\\s+");
 

@@ -1,10 +1,10 @@
 package banking;
 
-public class PassTimeValidator {
-
+public class PassTimeValidator extends Validator {
     public PassTimeValidator() {
     }
 
+    @Override
     public boolean validate(String command) {
         command = command.toLowerCase();
         String[] words = command.split("\\s+");

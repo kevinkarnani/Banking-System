@@ -3,7 +3,7 @@ package banking;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class BankTest {
     public Bank bank;
@@ -57,5 +57,45 @@ public class BankTest {
         this.bank.depositIntoAccount(12345678, 100);
         this.bank.withdrawFromAccount(12345678, 70);
         assertEquals(this.bank.accounts.get(12345678).getAmount(), 30);
+    }
+
+    @Test
+    public void min_apr_is_0() {
+        assertTrue(this.bank.validateInitialAPR(0));
+    }
+
+    @Test
+    public void max_apr_is_10() {
+        assertTrue(this.bank.validateInitialAPR(10));
+    }
+
+    @Test
+    public void CD_initial_1000_is_valid() {
+        assertTrue(this.bank.validateInitialCDAmount(1000));
+    }
+
+    @Test
+    public void CD_initial_10000_is_valid() {
+        assertTrue(this.bank.validateInitialCDAmount(10000));
+    }
+
+    @Test
+    public void apr_below_0_is_invalid() {
+        assertFalse(this.bank.validateInitialAPR(-1));
+    }
+
+    @Test
+    public void apr_above_10_is_invalid() {
+        assertFalse(this.bank.validateInitialAPR(11));
+    }
+
+    @Test
+    public void CD_initial_below_1000_is_invalid() {
+        assertFalse(this.bank.validateInitialCDAmount(100));
+    }
+
+    @Test
+    public void CD_initial_above_10000_is_invalid() {
+        assertFalse(this.bank.validateInitialCDAmount(10001));
     }
 }
