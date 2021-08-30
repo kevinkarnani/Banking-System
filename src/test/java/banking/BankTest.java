@@ -60,6 +60,36 @@ public class BankTest {
     }
 
     @Test
+    public void transfer_between_checking_and_savings() {
+        this.bank.createCheckingAccount(12345678, 1);
+        this.bank.createSavingsAccount(23456789, 1);
+        this.bank.depositIntoAccount(12345678, 100);
+        this.bank.transfer(12345678, 23456789, 50);
+        assertEquals(this.bank.accounts.get(12345678).getAmount(), 50);
+        assertEquals(this.bank.accounts.get(23456789).getAmount(), 50);
+    }
+
+    @Test
+    public void transfer_no_overdraft() {
+        this.bank.createCheckingAccount(12345678, 1);
+        this.bank.createSavingsAccount(23456789, 1);
+        this.bank.depositIntoAccount(12345678, 100);
+        this.bank.transfer(12345678, 23456789, 200);
+        assertEquals(this.bank.accounts.get(12345678).getAmount(), 0);
+        assertEquals(this.bank.accounts.get(23456789).getAmount(), 100);
+    }
+
+    @Test
+    public void full_transfer_leads_to_0() {
+        this.bank.createCheckingAccount(12345678, 1);
+        this.bank.createSavingsAccount(23456789, 1);
+        this.bank.depositIntoAccount(12345678, 100);
+        this.bank.transfer(12345678, 23456789, this.bank.accounts.get(12345678).getAmount());
+        assertEquals(this.bank.accounts.get(12345678).getAmount(), 0);
+        assertEquals(this.bank.accounts.get(23456789).getAmount(), 100);
+    }
+
+    @Test
     public void min_apr_is_0() {
         assertTrue(this.bank.validateInitialAPR(0));
     }

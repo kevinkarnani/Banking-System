@@ -5,5 +5,6 @@ public class SavingsAccount extends Account {
         this.amount = 0;
         this.apr = apr;
         this.maxDeposit = 2500;
+        this.maxWithdraw = 1000;
     }
 }
