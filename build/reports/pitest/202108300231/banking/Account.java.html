@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>Account.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package banking;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>public abstract class Account {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    protected double amount;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    protected double apr;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    protected double maxDeposit;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    protected double maxWithdraw;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    protected int months;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void deposit(double amount) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_11'/>
+11
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_11'>1</a>
+<span>
+1. deposit : Replaced double addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.amount += amount;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.months = 0;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void withdraw(double amount) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_16'/>
+16
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_16'>1</a>
+<span>
+1. withdraw : Replaced double subtraction with addition &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.amount -= amount;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_18'/>
+18
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_18'>2</a>
+<span>
+1. withdraw : changed conditional boundary &rarr; SURVIVED<br/>
+2. withdraw : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if (this.amount &#60; 0) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            this.amount = 0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public double getAmount() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_24'/>
+24
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_24'>1</a>
+<span>
+1. getAmount : replaced double return with 0.0d for banking/Account::getAmount &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return this.amount;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean validDepositAmount(double amount) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_28'/>
+28
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_28'>3</a>
+<span>
+1. validDepositAmount : replaced boolean return with true for banking/Account::validDepositAmount &rarr; KILLED<br/>
+2. validDepositAmount : changed conditional boundary &rarr; KILLED<br/>
+3. validDepositAmount : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return amount &#60;= this.maxDeposit;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean validTransferAmount(double amount) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_32'/>
+32
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_32'>2</a>
+<span>
+1. validTransferAmount : replaced boolean return with false for banking/Account::validTransferAmount &rarr; KILLED<br/>
+2. validTransferAmount : replaced boolean return with true for banking/Account::validTransferAmount &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return this.validWithdrawAmount(amount);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean validWithdrawAmount(double amount) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_36'/>
+36
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_36'>3</a>
+<span>
+1. validWithdrawAmount : replaced boolean return with true for banking/Account::validWithdrawAmount &rarr; KILLED<br/>
+2. validWithdrawAmount : changed conditional boundary &rarr; KILLED<br/>
+3. validWithdrawAmount : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return amount &#60;= this.maxWithdraw;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void passTime() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_40'/>
+40
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_40'>2</a>
+<span>
+1. passTime : changed conditional boundary &rarr; KILLED<br/>
+2. passTime : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (this.amount &#60; 100) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_41'/>
+41
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_41'>1</a>
+<span>
+1. passTime : removed call to banking/Account::withdraw &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            this.withdraw(25);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_42'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_43'/>
+43
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_43'>1</a>
+<span>
+1. passTime : removed call to banking/Account::calculateAPR &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.calculateAPR();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_44'/>
+44
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_44'>1</a>
+<span>
+1. passTime : Replaced integer addition with subtraction &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        this.months += 1;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_45'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void calculateAPR() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_48'/>
+48
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_48'>4</a>
+<span>
+1. calculateAPR : Replaced double division with multiplication &rarr; KILLED<br/>
+2. calculateAPR : Replaced double division with multiplication &rarr; KILLED<br/>
+3. calculateAPR : Replaced double multiplication with division &rarr; KILLED<br/>
+4. calculateAPR : Replaced double addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.amount += (this.apr / 100) / 12 * this.amount;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3f736a16_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3f736a16_11'>11</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_11'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>deposit<br/><b>Killed by : </b>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:deposit_twice()]</span></span> Replaced double addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3f736a16_16'>16</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_16'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>withdraw<br/><b>Killed by : </b>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:withdraw_below_0_ends_in_0()]</span></span> Replaced double subtraction with addition &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3f736a16_18'>18</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_18'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>withdraw<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>withdraw<br/><b>Killed by : </b>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:withdraw_below_0_ends_in_0()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3f736a16_24'>24</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_24'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getAmount<br/><b>Killed by : </b>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:default_cd_account_balance()]</span></span> replaced double return with 0.0d for banking/Account::getAmount &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3f736a16_28'>28</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_28'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>validDepositAmount<br/><b>Killed by : </b>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:checking_over_max_deposit_is_invalid()]</span></span> replaced boolean return with true for banking/Account::validDepositAmount &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>validDepositAmount<br/><b>Killed by : </b>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:checking_max_deposit_is_1000()]</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>validDepositAmount<br/><b>Killed by : </b>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:checking_over_max_deposit_is_invalid()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3f736a16_32'>32</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_32'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>validTransferAmount<br/><b>Killed by : </b>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:transfer_limit_for_checking_is_400()]</span></span> replaced boolean return with false for banking/Account::validTransferAmount &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>validTransferAmount<br/><b>Killed by : </b>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:transfer_checking_above_400()]</span></span> replaced boolean return with true for banking/Account::validTransferAmount &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3f736a16_36'>36</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_36'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>validWithdrawAmount<br/><b>Killed by : </b>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:withdraw_before_12_months_is_invalid()]</span></span> replaced boolean return with true for banking/Account::validWithdrawAmount &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>validWithdrawAmount<br/><b>Killed by : </b>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:transfer_limit_for_checking_is_400()]</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>validWithdrawAmount<br/><b>Killed by : </b>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:transfer_limit_for_checking_is_400()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3f736a16_40'>40</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_40'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>passTime<br/><b>Killed by : </b>banking.PassTimeProcessorTest.[engine:junit-jupiter]/[class:banking.PassTimeProcessorTest]/[method:pass_time_savings_account()]</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>passTime<br/><b>Killed by : </b>banking.PassTimeProcessorTest.[engine:junit-jupiter]/[class:banking.PassTimeProcessorTest]/[method:pass_time_checking_account()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3f736a16_41'>41</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_41'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>passTime<br/><b>Killed by : </b>banking.PassTimeProcessorTest.[engine:junit-jupiter]/[class:banking.PassTimeProcessorTest]/[method:pass_time_leading_to_deleting_account()]</span></span> removed call to banking/Account::withdraw &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3f736a16_43'>43</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_43'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>passTime<br/><b>Killed by : </b>banking.PassTimeProcessorTest.[engine:junit-jupiter]/[class:banking.PassTimeProcessorTest]/[method:pass_time_checking_account()]</span></span> removed call to banking/Account::calculateAPR &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3f736a16_44'>44</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_44'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>passTime<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; SURVIVED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3f736a16_48'>48</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3f736a16_48'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>calculateAPR<br/><b>Killed by : </b>banking.PassTimeProcessorTest.[engine:junit-jupiter]/[class:banking.PassTimeProcessorTest]/[method:pass_time_checking_account()]</span></span> Replaced double division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>calculateAPR<br/><b>Killed by : </b>banking.PassTimeProcessorTest.[engine:junit-jupiter]/[class:banking.PassTimeProcessorTest]/[method:pass_time_checking_account()]</span></span> Replaced double division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>calculateAPR<br/><b>Killed by : </b>banking.PassTimeProcessorTest.[engine:junit-jupiter]/[class:banking.PassTimeProcessorTest]/[method:pass_time_checking_account()]</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>calculateAPR<br/><b>Killed by : </b>banking.PassTimeProcessorTest.[engine:junit-jupiter]/[class:banking.PassTimeProcessorTest]/[method:pass_time_checking_account()]</span></span> Replaced double addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>BOOLEAN_FALSE_RETURN</li>
+<li class='mutator'>BOOLEAN_TRUE_RETURN</li>
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+<li class='mutator'>EMPTY_RETURN_VALUES</li>
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+<li class='mutator'>MATH_MUTATOR</li>
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+<li class='mutator'>NULL_RETURN_VALUES</li>
+<li class='mutator'>PRIMITIVE_RETURN_VALS_MUTATOR</li>
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:withdraw_below_0_ends_in_0()] (1 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:transfer_limit_for_savings_is_1000()] (4 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:cannot_transfer_from_CD()] (12 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_invalid_id()] (1 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_checking_with_decimals()] (2 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_over_savings_max_is_invalid()] (15 ms)</li><li>banking.WithdrawProcessorTest.[engine:junit-jupiter]/[class:banking.WithdrawProcessorTest]/[method:withdraw_checking_case_insensitive()] (3 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_checking_case_insensitive()] (2 ms)</li><li>banking.BankTest.[engine:junit-jupiter]/[class:banking.BankTest]/[method:deposit_into_account()] (10 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:savings_max_deposit_is_2500()] (6 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:withdraw_all_from_cd_after_12_months()] (2 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_invalid_withdraw()] (3 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:checking_max_withdraw_is_400()] (6 ms)</li><li>banking.WithdrawProcessorTest.[engine:junit-jupiter]/[class:banking.WithdrawProcessorTest]/[method:withdraw_savings()] (1 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_full_cd_after_12_months()] (2 ms)</li><li>banking.DepositValidatorTest.[engine:junit-jupiter]/[class:banking.DepositValidatorTest]/[method:deposit_checking_above_max()] (7 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:savings_over_max_deposit_is_invalid()] (14 ms)</li><li>banking.DepositValidatorTest.[engine:junit-jupiter]/[class:banking.DepositValidatorTest]/[method:deposit_checking_case_insensitive()] (2 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:withdraw_before_12_months_is_invalid()] (2 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_over_balance_is_valid()] (2 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:checking_over_max_deposit_is_invalid()] (3 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:transfer_savings_above_1000()] (9 ms)</li><li>banking.DepositProcessorTest.[engine:junit-jupiter]/[class:banking.DepositProcessorTest]/[method:deposit_checking_case_insensitive()] (2 ms)</li><li>banking.BankTest.[engine:junit-jupiter]/[class:banking.BankTest]/[method:withdraw_from_account()] (2 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:deposit_1000_into_checking_is_valid()] (4 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:savings_max_withdraw_is_1000()] (3 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_alphanumeric_amount()] (2 ms)</li><li>banking.PassTimeProcessorTest.[engine:junit-jupiter]/[class:banking.PassTimeProcessorTest]/[method:pass_time_checking_account()] (2 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:default_cd_account_balance()] (3 ms)</li><li>banking.PassTimeProcessorTest.[engine:junit-jupiter]/[class:banking.PassTimeProcessorTest]/[method:pass_time_leads_to_no_balance()] (4 ms)</li><li>banking.DepositProcessorTest.[engine:junit-jupiter]/[class:banking.DepositProcessorTest]/[method:deposit_checking_with_decimals()] (1 ms)</li><li>banking.BankTest.[engine:junit-jupiter]/[class:banking.BankTest]/[method:transfer_between_checking_and_savings()] (4 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:savings_over_max_withdraw_is_invalid()] (9 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_cd_too_early()] (1 ms)</li><li>banking.DepositValidatorTest.[engine:junit-jupiter]/[class:banking.DepositValidatorTest]/[method:deposit_savings_above_max()] (2 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:deposit()] (5 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_between_checking_and_savings_accounts()] (4 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:transfer_checking_above_400()] (4 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:transfer_limit_for_checking_is_400()] (2 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:valid_commands_return_empty()] (6 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:withdraw_more_than_balance_from_cd_after_12_months()] (4 ms)</li><li>banking.DepositProcessorTest.[engine:junit-jupiter]/[class:banking.DepositProcessorTest]/[method:deposit_savings()] (1 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_between_savings_and_checking_accounts()] (2 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:default_savings_account_balance()] (3 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_savings()] (18 ms)</li><li>banking.PassTimeProcessorTest.[engine:junit-jupiter]/[class:banking.PassTimeProcessorTest]/[method:pass_time_case_insensitive()] (3 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_missing_amount()] (2 ms)</li><li>banking.DepositValidatorTest.[engine:junit-jupiter]/[class:banking.DepositValidatorTest]/[method:deposit_cd()] (2 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_half_cd_after_12_months()] (1 ms)</li><li>banking.PassTimeProcessorTest.[engine:junit-jupiter]/[class:banking.PassTimeProcessorTest]/[method:pass_time_empty_accounts()] (1 ms)</li><li>banking.TransferProcessorTest.[engine:junit-jupiter]/[class:banking.TransferProcessorTest]/[method:transfer_over_balance_is_valid()] (2 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:withdraw_0_is_valid()] (5 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:withdraw_zero_is_valid()] (13 ms)</li><li>banking.TransferProcessorTest.[engine:junit-jupiter]/[class:banking.TransferProcessorTest]/[method:transfer_case_insensitive()] (1 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_missing_id()] (1 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_checking_above_max()] (2 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:withdraw_half_from_cd_after_12_months_is_invalid()] (8 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_missing_withdraw()] (1 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_checking()] (1 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:checking_max_deposit_is_1000()] (4 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_invalid_amount()] (2 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:withdraw()] (15 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:default_checking_account_balance()] (2 ms)</li><li>banking.DepositValidatorTest.[engine:junit-jupiter]/[class:banking.DepositValidatorTest]/[method:deposit_savings()] (2 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:withdraw_twice()] (3 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_is_case_insensitive()] (1 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:deposit_2500_into_savings_is_valid()] (16 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_over_checking_max_is_invalid()] (3 ms)</li><li>banking.TransferProcessorTest.[engine:junit-jupiter]/[class:banking.TransferProcessorTest]/[method:transfer_between_checking_and_savings_accounts()] (1 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_savings_above_max()] (21 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:checking_over_max_withdraw_is_invalid()] (7 ms)</li><li>banking.DepositProcessorTest.[engine:junit-jupiter]/[class:banking.DepositProcessorTest]/[method:deposit_checking()] (2 ms)</li><li>banking.WithdrawProcessorTest.[engine:junit-jupiter]/[class:banking.WithdrawProcessorTest]/[method:withdraw_checking_with_decimals()] (1 ms)</li><li>banking.WithdrawProcessorTest.[engine:junit-jupiter]/[class:banking.WithdrawProcessorTest]/[method:withdraw_checking()] (11 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:deposit_twice()] (3 ms)</li><li>banking.BankTest.[engine:junit-jupiter]/[class:banking.BankTest]/[method:transfer_no_overdraft()] (2 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_checking_over_balance()] (1 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_negative_amount()] (3 ms)</li><li>banking.BankTest.[engine:junit-jupiter]/[class:banking.BankTest]/[method:full_transfer_leads_to_0()] (7 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:cannot_transfer_to_cd()] (2 ms)</li><li>banking.DepositValidatorTest.[engine:junit-jupiter]/[class:banking.DepositValidatorTest]/[method:deposit_checking()] (1 ms)</li><li>banking.WithdrawValidatorTest.[engine:junit-jupiter]/[class:banking.WithdrawValidatorTest]/[method:withdraw_nonexistent_account()] (3 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:withdraw_more_than_balance()] (7 ms)</li><li>banking.PassTimeProcessorTest.[engine:junit-jupiter]/[class:banking.PassTimeProcessorTest]/[method:pass_time_savings_account()] (3 ms)</li><li>banking.PassTimeProcessorTest.[engine:junit-jupiter]/[class:banking.PassTimeProcessorTest]/[method:pass_time_CD_account()] (3 ms)</li><li>banking.PassTimeProcessorTest.[engine:junit-jupiter]/[class:banking.PassTimeProcessorTest]/[method:pass_time_leading_to_deleting_account()] (3 ms)</li><li>banking.TransferProcessorTest.[engine:junit-jupiter]/[class:banking.TransferProcessorTest]/[method:transfer_between_savings_and_checking_accounts()] (0 ms)</li><li>banking.DepositValidatorTest.[engine:junit-jupiter]/[class:banking.DepositValidatorTest]/[method:deposit_checking_with_decimals()] (2 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.5.2
+
+</body>
+</html>

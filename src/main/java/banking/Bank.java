@@ -41,6 +41,10 @@ public class Bank {
         return this.accounts.get(uuid).validDepositAmount(amount);
     }
 
+    public boolean accountWithdrawUnderLimit(double amount, int uuid) {
+        return this.accounts.get(uuid).validWithdrawAmount(amount);
+    }
+
     public void passTime(int time) {
         // Math.abs() to make the mutation tests not time out... what a joke
         for (int i = 0; Math.abs(i) < time; i++) {

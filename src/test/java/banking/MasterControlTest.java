@@ -39,6 +39,24 @@ public class MasterControlTest {
     }
 
     @Test
+    public void typo_in_withdraw_command_is_invalid() {
+        this.input.add("withdrew 12345678 100");
+
+        List<String> actual = this.masterControl.start(this.input);
+
+        assertSingleCommand("withdrew 12345678 100", actual);
+    }
+
+    @Test
+    public void typo_in_transfer_command_is_invalid() {
+        this.input.add("trans 12345678 23456789 100");
+
+        List<String> actual = this.masterControl.start(this.input);
+
+        assertSingleCommand("trans 12345678 23456789 100", actual);
+    }
+
+    @Test
     public void two_typo_commands_both_invalid() {
         this.input.add("creat checking 12345678 1.0");
         this.input.add("depositt 12345678 100");
@@ -66,6 +84,7 @@ public class MasterControlTest {
         this.input.add("create savings 23456789 1.0");
         this.input.add("deposit 12345678 100");
         this.input.add("transfer 12345678 23456789 100");
+        this.input.add("withdraw 23456789 100");
         this.input.add("pass 1");
 
         List<String> actual = this.masterControl.start(this.input);

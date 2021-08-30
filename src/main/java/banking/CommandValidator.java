@@ -11,6 +11,7 @@ public class CommandValidator {
         this.validators = new ArrayList<>();
         this.validators.add(new CreateValidator(this.bank));
         this.validators.add(new DepositValidator(this.bank));
+        this.validators.add(new WithdrawValidator(this.bank));
         this.validators.add(new TransferValidator(this.bank));
         this.validators.add(new PassTimeValidator());
     }

@@ -17,7 +17,7 @@ public class DepositValidatorTest {
         this.bank.createCheckingAccount(12345678, 0.1);
         this.bank.createSavingsAccount(23456789, 0.1);
         this.bank.createCDAccount(34567890, 2000, 1);
-        this.commandValidator = new DepositValidator(bank);
+        this.commandValidator = new DepositValidator(this.bank);
     }
 
     @Test

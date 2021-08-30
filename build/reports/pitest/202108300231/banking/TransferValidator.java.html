@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>TransferValidator.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package banking;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class TransferValidator extends Validator {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public TransferValidator(Bank bank) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.bank = bank;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean validate(String command) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        command = command.toLowerCase();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        String[] words = command.split(&#34;\\s+&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_13'/>
+13
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_13'>5</a>
+<span>
+1. validate : replaced boolean return with true for banking/TransferValidator::validate &rarr; KILLED<br/>
+2. validate : negated conditional &rarr; KILLED<br/>
+3. validate : negated conditional &rarr; KILLED<br/>
+4. validate : negated conditional &rarr; KILLED<br/>
+5. validate : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return words[0].equals(&#34;transfer&#34;) &#38;&#38; words.length == 4 &#38;&#38; this.validateIDs(words) &#38;&#38; this.validTransfer(words);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean validateIDs(String[] words) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_17'/>
+17
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_17'>3</a>
+<span>
+1. validateIDs : replaced boolean return with true for banking/TransferValidator::validateIDs &rarr; KILLED<br/>
+2. validateIDs : negated conditional &rarr; KILLED<br/>
+3. validateIDs : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return words[1].matches(&#34;\\d+&#34;) &#38;&#38; words[2].matches(&#34;\\d+&#34;) &#38;&#38;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_18'/>
+18
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_18'>1</a>
+<span>
+1. validateIDs : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                this.bank.accountExists(Integer.parseInt(words[1])) &#38;&#38;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_19'/>
+19
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_19'>1</a>
+<span>
+1. validateIDs : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                this.bank.accountExists(Integer.parseInt(words[2]));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean validTransfer(String[] words) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_23'/>
+23
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_23'>3</a>
+<span>
+1. validTransfer : replaced boolean return with true for banking/TransferValidator::validTransfer &rarr; KILLED<br/>
+2. validTransfer : negated conditional &rarr; KILLED<br/>
+3. validTransfer : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return words[3].matches(&#34;\\d*\\.?\\d+&#34;) &#38;&#38; this.bank.validTransfer(Integer.parseInt(words[1]),</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                Integer.parseInt(words[2]), Double.parseDouble(words[3]));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@404db674_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@404db674_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@404db674_13'>13</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@404db674_13'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>validate<br/><b>Killed by : </b>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:missing_both_ids()]</span></span> replaced boolean return with true for banking/TransferValidator::validate &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>validate<br/><b>Killed by : </b>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_is_case_insensitive()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>validate<br/><b>Killed by : </b>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:missing_both_ids()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>validate<br/><b>Killed by : </b>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:no_alphanumeric_id()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>validate<br/><b>Killed by : </b>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:no_alphanumeric_amount()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@404db674_17'>17</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@404db674_17'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>validateIDs<br/><b>Killed by : </b>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:no_alphanumeric_id()]</span></span> replaced boolean return with true for banking/TransferValidator::validateIDs &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>validateIDs<br/><b>Killed by : </b>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_is_case_insensitive()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>validateIDs<br/><b>Killed by : </b>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_is_case_insensitive()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@404db674_18'>18</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@404db674_18'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>validateIDs<br/><b>Killed by : </b>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_is_case_insensitive()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@404db674_19'>19</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@404db674_19'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>validateIDs<br/><b>Killed by : </b>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_is_case_insensitive()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@404db674_23'>23</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@404db674_23'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>validTransfer<br/><b>Killed by : </b>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:no_alphanumeric_amount()]</span></span> replaced boolean return with true for banking/TransferValidator::validTransfer &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>validTransfer<br/><b>Killed by : </b>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:no_alphanumeric_amount()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>validTransfer<br/><b>Killed by : </b>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:cannot_transfer_from_cd()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>BOOLEAN_FALSE_RETURN</li>
+<li class='mutator'>BOOLEAN_TRUE_RETURN</li>
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+<li class='mutator'>EMPTY_RETURN_VALUES</li>
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+<li class='mutator'>MATH_MUTATOR</li>
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+<li class='mutator'>NULL_RETURN_VALUES</li>
+<li class='mutator'>PRIMITIVE_RETURN_VALS_MUTATOR</li>
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:cannot_transfer_from_CD()] (12 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:two_typo_commands_both_invalid()] (1 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_over_savings_max_is_invalid()] (15 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_is_case_insensitive()] (1 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:missing_origin_id()] (2 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_over_checking_max_is_invalid()] (3 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:missing_recipient_id()] (6 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_between_checking_and_savings_accounts()] (4 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:typo_in_transfer_command_is_invalid()] (1 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:valid_commands_return_empty()] (6 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:missing_both_ids()] (1 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:no_alphanumeric_id()] (1 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:invalid_to_create_accounts_with_same_ID()] (1 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:typo_in_deposit_command_is_invalid()] (1 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:no_alphanumeric_amount()] (2 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_over_balance_is_valid()] (2 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:typo_in_withdraw_command_is_invalid()] (2 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:cannot_transfer_from_cd()] (2 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:cannot_transfer_to_cd()] (2 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:transfer_between_savings_and_checking_accounts()] (2 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:typo_in_create_command_is_invalid()] (2 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:missing_transfer()] (2 ms)</li><li>banking.TransferValidatorTest.[engine:junit-jupiter]/[class:banking.TransferValidatorTest]/[method:missing_amount()] (2 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.5.2
+
+</body>
+</html>
