@@ -1,20 +1,21 @@
 package banking;
 
+import java.util.ArrayList;
+
 public class CommandValidator {
     public Bank bank;
-    public CreateValidator createValidator;
-    public DepositValidator depositValidator;
-    public PassTimeValidator passTimeValidator;
+    public ArrayList<Validator> validators;
 
     public CommandValidator(Bank bank) {
         this.bank = bank;
-        this.createValidator = new CreateValidator(this.bank);
-        this.depositValidator = new DepositValidator(this.bank);
-        this.passTimeValidator = new PassTimeValidator();
+        this.validators = new ArrayList<>();
+        this.validators.add(new CreateValidator(this.bank));
+        this.validators.add(new DepositValidator(this.bank));
+        this.validators.add(new TransferValidator(this.bank));
+        this.validators.add(new PassTimeValidator());
     }
 
     public boolean validateCommand(String command) {
-        return this.createValidator.validate(command) || this.depositValidator.validate(command) ||
-                this.passTimeValidator.validate(command);
+        return this.validators.stream().map(v -> v.validate(command)).reduce(Boolean::logicalOr).orElse(false);
     }
 }

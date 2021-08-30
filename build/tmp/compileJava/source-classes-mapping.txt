@@ -4,8 +4,8 @@ banking/Processor.java
  banking.Processor
 banking/CDCreateValidator.java
  banking.CDCreateValidator
-banking/MasterControl.java
- banking.MasterControl
+banking/Bank.java
+ banking.Bank
 banking/CommandProcessor.java
  banking.CommandProcessor
 banking/CreateValidator.java
@@ -24,15 +24,17 @@ banking/TransferValidator.java
  banking.TransferValidator
 banking/Validator.java
  banking.Validator
-banking/CommandValidator.java
- banking.CommandValidator
+banking/SavingsAccount.java
+ banking.SavingsAccount
 banking/CDAccount.java
  banking.CDAccount
 banking/CheckingAccount.java
  banking.CheckingAccount
 banking/Account.java
  banking.Account
-banking/Bank.java
- banking.Bank
-banking/SavingsAccount.java
- banking.SavingsAccount
+banking/CommandValidator.java
+ banking.CommandValidator
+banking/MasterControl.java
+ banking.MasterControl
+banking/TransferProcessor.java
+ banking.TransferProcessor

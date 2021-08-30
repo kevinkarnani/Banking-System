@@ -25,6 +25,12 @@ public class PassTimeProcessorTest {
     }
 
     @Test
+    public void pass_time_case_insensitive() {
+        this.passTimeProcessor.process("PaSs 1");
+        assertEquals(this.bank.accounts.size(), 1);
+    }
+
+    @Test
     public void pass_time_checking_account() {
         this.bank.accounts.get(12345678).deposit(300);
         this.passTimeProcessor.process("pass 1");

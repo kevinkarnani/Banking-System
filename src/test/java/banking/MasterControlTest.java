@@ -63,7 +63,9 @@ public class MasterControlTest {
     @Test
     public void valid_commands_return_empty() {
         this.input.add("create checking 12345678 1.0");
+        this.input.add("create savings 23456789 1.0");
         this.input.add("deposit 12345678 100");
+        this.input.add("transfer 12345678 23456789 100");
         this.input.add("pass 1");
 
         List<String> actual = this.masterControl.start(this.input);

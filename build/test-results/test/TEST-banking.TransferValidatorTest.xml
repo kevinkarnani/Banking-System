@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="banking.TransferValidatorTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2021-08-30T02:15:46" hostname="Kevins-MacBook-Pro.local" time="0.096">
+<testsuite name="banking.TransferValidatorTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2021-08-30T04:55:18" hostname="Kevins-MacBook-Pro.local" time="0.134">
   <properties/>
-  <testcase name="cannot_transfer_from_cd()" classname="banking.TransferValidatorTest" time="0.045"/>
-  <testcase name="transfer_over_balance_is_valid()" classname="banking.TransferValidatorTest" time="0.004"/>
-  <testcase name="transfer_between_checking_and_savings_accounts()" classname="banking.TransferValidatorTest" time="0.001"/>
+  <testcase name="cannot_transfer_from_cd()" classname="banking.TransferValidatorTest" time="0.072"/>
+  <testcase name="transfer_over_balance_is_valid()" classname="banking.TransferValidatorTest" time="0.005"/>
+  <testcase name="transfer_between_checking_and_savings_accounts()" classname="banking.TransferValidatorTest" time="0.007"/>
   <testcase name="transfer_between_savings_and_checking_accounts()" classname="banking.TransferValidatorTest" time="0.001"/>
-  <testcase name="transfer_over_checking_max_is_invalid()" classname="banking.TransferValidatorTest" time="0.0"/>
-  <testcase name="transfer_over_savings_max_is_invalid()" classname="banking.TransferValidatorTest" time="0.001"/>
-  <testcase name="no_alphanumeric_id()" classname="banking.TransferValidatorTest" time="0.002"/>
+  <testcase name="transfer_over_checking_max_is_invalid()" classname="banking.TransferValidatorTest" time="0.001"/>
+  <testcase name="transfer_over_savings_max_is_invalid()" classname="banking.TransferValidatorTest" time="0.003"/>
+  <testcase name="no_alphanumeric_id()" classname="banking.TransferValidatorTest" time="0.001"/>
+  <testcase name="transfer_is_case_insensitive()" classname="banking.TransferValidatorTest" time="0.002"/>
   <testcase name="no_alphanumeric_amount()" classname="banking.TransferValidatorTest" time="0.001"/>
-  <testcase name="missing_transfer()" classname="banking.TransferValidatorTest" time="0.001"/>
-  <testcase name="missing_recipient_id()" classname="banking.TransferValidatorTest" time="0.004"/>
+  <testcase name="missing_transfer()" classname="banking.TransferValidatorTest" time="0.002"/>
+  <testcase name="missing_recipient_id()" classname="banking.TransferValidatorTest" time="0.002"/>
   <testcase name="missing_origin_id()" classname="banking.TransferValidatorTest" time="0.001"/>
-  <testcase name="missing_amount()" classname="banking.TransferValidatorTest" time="0.0"/>
-  <testcase name="missing_both_ids()" classname="banking.TransferValidatorTest" time="0.002"/>
-  <testcase name="cannot_transfer_to_cd()" classname="banking.TransferValidatorTest" time="0.002"/>
+  <testcase name="missing_amount()" classname="banking.TransferValidatorTest" time="0.001"/>
+  <testcase name="missing_both_ids()" classname="banking.TransferValidatorTest" time="0.0"/>
+  <testcase name="cannot_transfer_to_cd()" classname="banking.TransferValidatorTest" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -32,6 +32,12 @@ public class TransferValidatorTest {
     }
 
     @Test
+    public void transfer_is_case_insensitive() {
+        this.bank.depositIntoAccount(23456789, 100);
+        assertTrue(this.commandValidator.validate("TrAnSfEr 23456789 12345678 50"));
+    }
+
+    @Test
     public void transfer_over_balance_is_valid() {
         this.bank.depositIntoAccount(12345678, 100);
         assertTrue(this.commandValidator.validate("transfer 12345678 23456789 200"));
