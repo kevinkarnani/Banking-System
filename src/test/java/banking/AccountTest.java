@@ -108,6 +108,38 @@ public class AccountTest {
     }
 
     @Test
+    public void checking_max_withdraw_is_400() {
+        assertTrue(this.checkingAccount.validWithdrawAmount(400));
+    }
+
+    @Test
+    public void savings_max_withdraw_is_1000() {
+        assertTrue(this.savingsAccount.validWithdrawAmount(1000));
+    }
+
+    @Test
+    public void withdraw_all_from_cd_after_12_months() {
+        this.cdAccount.months = 12;
+        assertTrue(this.cdAccount.validWithdrawAmount(this.cdAccount.getAmount()));
+    }
+
+    @Test
+    public void withdraw_more_than_balance_from_cd_after_12_months() {
+        this.cdAccount.months = 12;
+        assertTrue(this.cdAccount.validWithdrawAmount(this.cdAccount.getAmount() * 2));
+    }
+
+    @Test
+    public void transfer_limit_for_checking_is_400() {
+        assertTrue(this.checkingAccount.validTransferAmount(400));
+    }
+
+    @Test
+    public void transfer_limit_for_savings_is_1000() {
+        assertTrue(this.savingsAccount.validTransferAmount(1000));
+    }
+
+    @Test
     public void checking_over_max_deposit_is_invalid() {
         assertFalse(this.checkingAccount.validDepositAmount(10000));
     }
@@ -115,5 +147,42 @@ public class AccountTest {
     @Test
     public void savings_over_max_deposit_is_invalid() {
         assertFalse(this.checkingAccount.validDepositAmount(10000));
+    }
+
+    @Test
+    public void checking_over_max_withdraw_is_invalid() {
+        assertFalse(this.checkingAccount.validWithdrawAmount(10000));
+    }
+
+    @Test
+    public void savings_over_max_withdraw_is_invalid() {
+        assertFalse(this.checkingAccount.validWithdrawAmount(10000));
+    }
+
+    @Test
+    public void withdraw_half_from_cd_after_12_months_is_invalid() {
+        this.cdAccount.months = 12;
+        assertFalse(this.cdAccount.validWithdrawAmount(this.cdAccount.getAmount() / 2));
+    }
+
+    @Test
+    public void withdraw_before_12_months_is_invalid() {
+        this.cdAccount.months = 11;
+        assertFalse(this.cdAccount.validWithdrawAmount(this.cdAccount.getAmount()));
+    }
+
+    @Test
+    public void transfer_checking_above_400() {
+        assertFalse(this.checkingAccount.validTransferAmount(2000));
+    }
+
+    @Test
+    public void transfer_savings_above_1000() {
+        assertFalse(this.savingsAccount.validTransferAmount(2000));
+    }
+
+    @Test
+    public void cannot_transfer_from_CD() {
+        assertFalse(this.cdAccount.validTransferAmount(this.cdAccount.getAmount()));
     }
 }

@@ -5,5 +5,6 @@ public class CheckingAccount extends Account {
         this.amount = 0;
         this.apr = apr;
         this.maxDeposit = 1000;
+        this.maxWithdraw = 400;
     }
 }

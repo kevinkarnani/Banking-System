@@ -4,9 +4,12 @@ public abstract class Account {
     protected double amount;
     protected double apr;
     protected double maxDeposit;
+    protected double maxWithdraw;
+    protected int months;
 
     public void deposit(double amount) {
         this.amount += amount;
+        this.months = 0;
     }
 
     public void withdraw(double amount) {
@@ -25,11 +28,20 @@ public abstract class Account {
         return amount <= this.maxDeposit;
     }
 
+    public boolean validTransferAmount(double amount) {
+        return this.validWithdrawAmount(amount);
+    }
+
+    public boolean validWithdrawAmount(double amount) {
+        return amount <= this.maxWithdraw;
+    }
+
     public void passTime() {
         if (this.amount < 100) {
             this.withdraw(25);
         }
         this.calculateAPR();
+        this.months += 1;
     }
 
     public void calculateAPR() {
