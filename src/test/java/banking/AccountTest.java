@@ -151,12 +151,19 @@ public class AccountTest {
 
     @Test
     public void checking_over_max_withdraw_is_invalid() {
-        assertFalse(this.checkingAccount.validWithdrawAmount(10000));
+        assertFalse(this.checkingAccount.validWithdrawAmount(5000));
     }
 
     @Test
     public void savings_over_max_withdraw_is_invalid() {
         assertFalse(this.checkingAccount.validWithdrawAmount(10000));
+    }
+
+    @Test
+    public void savings_withdraw_twice_per_month_is_invalid() {
+        this.savingsAccount.deposit(1000);
+        this.savingsAccount.withdraw(100);
+        assertFalse(this.savingsAccount.validWithdrawAmount(100));
     }
 
     @Test
@@ -183,6 +190,6 @@ public class AccountTest {
 
     @Test
     public void cannot_transfer_from_CD() {
-        assertFalse(this.cdAccount.validTransferAmount(this.cdAccount.getAmount()));
+        assertFalse(this.cdAccount.validTransferAmount(100));
     }
 }

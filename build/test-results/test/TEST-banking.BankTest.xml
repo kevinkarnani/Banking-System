@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="banking.BankTest" tests="31" skipped="0" failures="0" errors="0" timestamp="2021-09-04T01:03:51" hostname="Kevins-MacBook-Pro.local" time="0.139">
+  <properties/>
+  <testcase name="deposit_into_savings_below_2500()" classname="banking.BankTest" time="0.038"/>
+  <testcase name="withdraw_from_checking_below_400()" classname="banking.BankTest" time="0.004"/>
+  <testcase name="transfer_1000_from_savings_to_checking_is_valid()" classname="banking.BankTest" time="0.001"/>
+  <testcase name="min_apr_is_0()" classname="banking.BankTest" time="0.0"/>
+  <testcase name="create_cd_account()" classname="banking.BankTest" time="0.004"/>
+  <testcase name="CD_initial_10000_is_valid()" classname="banking.BankTest" time="0.002"/>
+  <testcase name="withdraw_from_cd_too_early()" classname="banking.BankTest" time="0.002"/>
+  <testcase name="transfer_1000_from_checking_to_savings()" classname="banking.BankTest" time="0.001"/>
+  <testcase name="create_savings_account()" classname="banking.BankTest" time="0.001"/>
+  <testcase name="empty_bank()" classname="banking.BankTest" time="0.002"/>
+  <testcase name="max_apr_is_10()" classname="banking.BankTest" time="0.001"/>
+  <testcase name="deposit_into_checking_above_1000()" classname="banking.BankTest" time="0.001"/>
+  <testcase name="CD_initial_1000_is_valid()" classname="banking.BankTest" time="0.001"/>
+  <testcase name="withdraw_from_cd_after_12()" classname="banking.BankTest" time="0.003"/>
+  <testcase name="deposit_into_checking_below_1000()" classname="banking.BankTest" time="0.002"/>
+  <testcase name="withdraw_from_savings_above_1000()" classname="banking.BankTest" time="0.003"/>
+  <testcase name="transfer_between_checking_and_savings()" classname="banking.BankTest" time="0.013"/>
+  <testcase name="deposit_into_account()" classname="banking.BankTest" time="0.001"/>
+  <testcase name="full_transfer_leads_to_0()" classname="banking.BankTest" time="0.001"/>
+  <testcase name="apr_above_10_is_invalid()" classname="banking.BankTest" time="0.001"/>
+  <testcase name="withdraw_from_savings_below_1000()" classname="banking.BankTest" time="0.0"/>
+  <testcase name="withdraw_from_account()" classname="banking.BankTest" time="0.0"/>
+  <testcase name="apr_below_0_is_invalid()" classname="banking.BankTest" time="0.001"/>
+  <testcase name="transfer_no_overdraft()" classname="banking.BankTest" time="0.0"/>
+  <testcase name="create_checking_account()" classname="banking.BankTest" time="0.002"/>
+  <testcase name="CD_initial_below_1000_is_invalid()" classname="banking.BankTest" time="0.001"/>
+  <testcase name="create_multiple()" classname="banking.BankTest" time="0.001"/>
+  <testcase name="deposit_into_savings_above_2500()" classname="banking.BankTest" time="0.001"/>
+  <testcase name="withdraw_from_checking_above_400()" classname="banking.BankTest" time="0.003"/>
+  <testcase name="CD_initial_above_10000_is_invalid()" classname="banking.BankTest" time="0.001"/>
+  <testcase name="deposit_into_cd_not_possible()" classname="banking.BankTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

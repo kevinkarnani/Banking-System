@@ -90,6 +90,40 @@ public class BankTest {
     }
 
     @Test
+    public void deposit_into_checking_below_1000() {
+        this.bank.createCheckingAccount(12345678, 1);
+        assertTrue(this.bank.accountDepositUnderLimit(1000, 12345678));
+    }
+
+    @Test
+    public void deposit_into_savings_below_2500() {
+        this.bank.createSavingsAccount(12345678, 1);
+        assertTrue(this.bank.accountDepositUnderLimit(2500, 12345678));
+    }
+
+    @Test
+    public void withdraw_from_checking_below_400() {
+        this.bank.createCheckingAccount(12345678, 1);
+        this.bank.depositIntoAccount(12345678, 400);
+        assertTrue(this.bank.accountWithdrawUnderLimit(400, 12345678));
+    }
+
+    @Test
+    public void withdraw_from_savings_below_1000() {
+        this.bank.createSavingsAccount(12345678, 1);
+        this.bank.depositIntoAccount(12345678, 1000);
+        assertTrue(this.bank.accountWithdrawUnderLimit(1000, 12345678));
+    }
+
+    @Test
+    public void withdraw_from_cd_after_12() {
+        this.bank.createCDAccount(12345678, 100, 0);
+        this.bank.passTime(12);
+        assertTrue(this.bank.accountWithdrawUnderLimit(100, 12345678));
+    }
+
+    @Test
+
     public void min_apr_is_0() {
         assertTrue(this.bank.validateInitialAPR(0));
     }
@@ -110,6 +144,52 @@ public class BankTest {
     }
 
     @Test
+    public void transfer_1000_from_savings_to_checking_is_valid() {
+        this.bank.createCheckingAccount(12345678, 1);
+        this.bank.createSavingsAccount(23456789, 1);
+        this.bank.depositIntoAccount(23456789, 1000);
+        assertTrue(this.bank.validTransfer(23456789, 12345678, 1000));
+    }
+
+    @Test
+    public void deposit_into_checking_above_1000() {
+        this.bank.createCheckingAccount(12345678, 1);
+        assertFalse(this.bank.accountDepositUnderLimit(1001, 12345678));
+    }
+
+    @Test
+    public void deposit_into_savings_above_2500() {
+        this.bank.createSavingsAccount(12345678, 1);
+        assertFalse(this.bank.accountDepositUnderLimit(2501, 12345678));
+    }
+
+    @Test
+    public void deposit_into_cd_not_possible() {
+        this.bank.createCDAccount(12345678, 100, 1);
+        assertFalse(this.bank.accountDepositUnderLimit(100, 12345678));
+    }
+
+    @Test
+    public void withdraw_from_checking_above_400() {
+        this.bank.createCheckingAccount(12345678, 1);
+        this.bank.depositIntoAccount(12345678, 401);
+        assertFalse(this.bank.accountWithdrawUnderLimit(401, 12345678));
+    }
+
+    @Test
+    public void withdraw_from_savings_above_1000() {
+        this.bank.createSavingsAccount(12345678, 1);
+        this.bank.depositIntoAccount(12345678, 1001);
+        assertFalse(this.bank.accountWithdrawUnderLimit(1001, 12345678));
+    }
+
+    @Test
+    public void withdraw_from_cd_too_early() {
+        this.bank.createCDAccount(12345678, 100, 1);
+        assertFalse(this.bank.accountWithdrawUnderLimit(100, 12345678));
+    }
+
+    @Test
     public void apr_below_0_is_invalid() {
         assertFalse(this.bank.validateInitialAPR(-1));
     }
@@ -127,5 +207,13 @@ public class BankTest {
     @Test
     public void CD_initial_above_10000_is_invalid() {
         assertFalse(this.bank.validateInitialCDAmount(10001));
+    }
+
+    @Test
+    public void transfer_1000_from_checking_to_savings() {
+        this.bank.createCheckingAccount(12345678, 1);
+        this.bank.createSavingsAccount(23456789, 1);
+        this.bank.depositIntoAccount(12345678, 1000);
+        assertFalse(this.bank.validTransfer(12345678, 23456789, 1000));
     }
 }
