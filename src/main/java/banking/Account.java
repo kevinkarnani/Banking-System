@@ -5,11 +5,10 @@ public abstract class Account {
     protected double apr;
     protected double maxDeposit;
     protected double maxWithdraw;
-    protected int months;
+    protected int months = 0;
 
     public void deposit(double amount) {
         this.amount += amount;
-        this.months = 0;
     }
 
     public void withdraw(double amount) {

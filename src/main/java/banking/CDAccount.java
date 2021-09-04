@@ -1,6 +1,8 @@
 package banking;
 
 public class CDAccount extends Account {
+    private boolean withdrawn = false;
+
     public CDAccount(double amount, double apr) {
         this.amount = amount;
         this.apr = apr;
@@ -18,7 +20,13 @@ public class CDAccount extends Account {
 
     @Override
     public boolean validWithdrawAmount(double amount) {
-        return super.validWithdrawAmount(amount) || (this.months >= 12 && amount >= this.amount);
+        return super.validWithdrawAmount(amount) || (this.months >= 12 && amount >= this.amount && !this.withdrawn);
+    }
+
+    @Override
+    public void withdraw(double amount) {
+        super.withdraw(amount);
+        this.withdrawn = true;
     }
 
     @Override
