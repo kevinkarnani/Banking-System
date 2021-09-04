@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="banking.DepositValidatorTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2021-09-04T21:31:27" hostname="Kevins-MacBook-Pro.local" time="0.057">
+  <properties/>
+  <testcase name="deposit_checking_case_insensitive()" classname="banking.DepositValidatorTest" time="0.009"/>
+  <testcase name="deposit_checking_with_decimals()" classname="banking.DepositValidatorTest" time="0.001"/>
+  <testcase name="deposit_invalid_amount()" classname="banking.DepositValidatorTest" time="0.001"/>
+  <testcase name="deposit_invalid_id()" classname="banking.DepositValidatorTest" time="0.0"/>
+  <testcase name="deposit_invalid_deposit()" classname="banking.DepositValidatorTest" time="0.001"/>
+  <testcase name="deposit_cd()" classname="banking.DepositValidatorTest" time="0.0"/>
+  <testcase name="deposit_savings()" classname="banking.DepositValidatorTest" time="0.001"/>
+  <testcase name="deposit_negative_amount()" classname="banking.DepositValidatorTest" time="0.0"/>
+  <testcase name="deposit_nonexistent_account()" classname="banking.DepositValidatorTest" time="0.001"/>
+  <testcase name="deposit_savings_above_max()" classname="banking.DepositValidatorTest" time="0.0"/>
+  <testcase name="deposit_missing_id()" classname="banking.DepositValidatorTest" time="0.0"/>
+  <testcase name="deposit_missing_amount()" classname="banking.DepositValidatorTest" time="0.008"/>
+  <testcase name="deposit_alphanumeric_amount()" classname="banking.DepositValidatorTest" time="0.005"/>
+  <testcase name="deposit_missing_deposit()" classname="banking.DepositValidatorTest" time="0.001"/>
+  <testcase name="deposit_checking()" classname="banking.DepositValidatorTest" time="0.001"/>
+  <testcase name="deposit_checking_above_max()" classname="banking.DepositValidatorTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

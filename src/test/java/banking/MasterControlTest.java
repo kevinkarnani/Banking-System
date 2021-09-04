@@ -106,15 +106,15 @@ public class MasterControlTest {
 
     @Test
     void sample_make_sure_this_passes_unchanged_or_you_will_fail() {
-        input.add("Create savings 12345678 0.6");
-        input.add("Deposit 12345678 700");
-        input.add("Deposit 12345678 5000");
-        input.add("creAte cHecKing 98765432 0.01");
-        input.add("Deposit 98765432 300");
-        input.add("Transfer 98765432 12345678 300");
-        input.add("Pass 1");
-        input.add("Create cd 23456789 1.2 2000");
-        List<String> actual = masterControl.start(input);
+        this.input.add("Create savings 12345678 0.6");
+        this.input.add("Deposit 12345678 700");
+        this.input.add("Deposit 12345678 5000");
+        this.input.add("creAte cHecKing 98765432 0.01");
+        this.input.add("Deposit 98765432 300");
+        this.input.add("Transfer 98765432 12345678 300");
+        this.input.add("Pass 1");
+        this.input.add("Create cd 23456789 1.2 2000");
+        List<String> actual = this.masterControl.start(this.input);
 
         assertEquals(5, actual.size());
         assertEquals("Savings 12345678 1000.50 0.60", actual.get(0));
@@ -122,6 +122,17 @@ public class MasterControlTest {
         assertEquals("Transfer 98765432 12345678 300", actual.get(2));
         assertEquals("Cd 23456789 2000.00 1.20", actual.get(3));
         assertEquals("Deposit 12345678 5000", actual.get(4));
+    }
+
+    @Test
+    public void test() {
+        this.input.add("Create checking 12345678 0.6");
+        this.input.add("Deposit 12345678 100");
+        this.input.add("Withdraw 12345678 100");
+        this.input.add("Pass 1");
+        this.input.add("Create savings 12345678 0.6");
+        List<String> actual = this.masterControl.start(this.input);
+        assertSingleCommand("Savings 12345678 0.00 0.60", actual);
     }
 
     private void assertSingleCommand(String command, List<String> actual) {

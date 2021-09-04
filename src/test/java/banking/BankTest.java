@@ -22,18 +22,21 @@ public class BankTest {
     public void create_checking_account() {
         this.bank.createCheckingAccount(12345678, .1);
         assertEquals(this.bank.accounts.size(), 1);
+        assertEquals(this.bank.accountHistory.size(), 1);
     }
 
     @Test
     public void create_savings_account() {
         this.bank.createSavingsAccount(12345678, .1);
         assertEquals(this.bank.accounts.size(), 1);
+        assertEquals(this.bank.accountHistory.size(), 1);
     }
 
     @Test
     public void create_cd_account() {
         this.bank.createCDAccount(12345678, 100, .1);
         assertEquals(this.bank.accounts.size(), 1);
+        assertEquals(this.bank.accountHistory.size(), 1);
     }
 
     @Test
@@ -52,11 +55,28 @@ public class BankTest {
     }
 
     @Test
+    public void deposit_into_account_with_history() {
+        this.bank.createSavingsAccount(12345678, .1);
+        this.bank.depositIntoAccount(12345678, 100, "Deposit 12345678 100");
+        assertEquals(this.bank.accounts.get(12345678).getAmount(), 100);
+        assertEquals(this.bank.accountHistory.get(12345678).get(0), "Deposit 12345678 100");
+    }
+
+    @Test
     public void withdraw_from_account() {
         this.bank.createCheckingAccount(12345678, .1);
         this.bank.depositIntoAccount(12345678, 100);
         this.bank.withdrawFromAccount(12345678, 70);
         assertEquals(this.bank.accounts.get(12345678).getAmount(), 30);
+    }
+
+    @Test
+    public void withdraw_from_account_with_history() {
+        this.bank.createCheckingAccount(12345678, .1);
+        this.bank.depositIntoAccount(12345678, 100, "Deposit 12345678 100");
+        this.bank.withdrawFromAccount(12345678, 70, "Withdraw 12345678 70");
+        assertEquals(this.bank.accounts.get(12345678).getAmount(), 30);
+        assertEquals(this.bank.accountHistory.get(12345678).get(1), "Withdraw 12345678 70");
     }
 
     @Test
@@ -67,6 +87,19 @@ public class BankTest {
         this.bank.transfer(12345678, 23456789, 50);
         assertEquals(this.bank.accounts.get(12345678).getAmount(), 50);
         assertEquals(this.bank.accounts.get(23456789).getAmount(), 50);
+    }
+
+    @Test
+    public void transfer_between_checking_and_savings_with_history() {
+        this.bank.createCheckingAccount(12345678, 1);
+        this.bank.createSavingsAccount(23456789, 1);
+        this.bank.depositIntoAccount(12345678, 100, "Deposit 12345678 100");
+        this.bank.transfer(12345678, 23456789, 50, "Transfer 12345678 23456789 50");
+        assertEquals(this.bank.accounts.get(12345678).getAmount(), 50);
+        assertEquals(this.bank.accounts.get(23456789).getAmount(), 50);
+        assertEquals(this.bank.accountHistory.get(12345678).get(0), "Deposit 12345678 100");
+        assertEquals(this.bank.accountHistory.get(12345678).get(1), "Transfer 12345678 23456789 50");
+        assertEquals(this.bank.accountHistory.get(23456789).get(0), "Transfer 12345678 23456789 50");
     }
 
     @Test

@@ -1,29 +1,23 @@
 package banking;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CommandProcessor {
     public Bank bank;
-    public ArrayList<Processor> processors;
+    public HashMap<String, Processor> processors;
 
     public CommandProcessor(Bank bank) {
         this.bank = bank;
-        this.processors = new ArrayList<>();
-        this.processors.add(new CreateProcessor(this.bank));
-        this.processors.add(new DepositProcessor(this.bank));
-        this.processors.add(new WithdrawProcessor(this.bank));
-        this.processors.add(new TransferProcessor(this.bank));
-        this.processors.add(new PassTimeProcessor(this.bank));
+        this.processors = new HashMap<>();
+        this.processors.put("create", new CreateProcessor(this.bank));
+        this.processors.put("deposit", new DepositProcessor(this.bank));
+        this.processors.put("withdraw", new WithdrawProcessor(this.bank));
+        this.processors.put("transfer", new TransferProcessor(this.bank));
+        this.processors.put("pass", new PassTimeProcessor(this.bank));
     }
 
     public void processCommand(String command) {
-        ArrayList<String> types = new ArrayList<>();
-        types.add("create");
-        types.add("deposit");
-        types.add("withdraw");
-        types.add("transfer");
-        types.add("pass");
         String[] words = command.toLowerCase().split("\\s+");
-        this.processors.get(types.indexOf(words[0])).process(command);
+        this.processors.get(words[0]).process(command);
     }
 }

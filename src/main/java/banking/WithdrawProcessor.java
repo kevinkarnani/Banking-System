@@ -8,6 +8,6 @@ public class WithdrawProcessor extends Processor {
     @Override
     public void process(String command) {
         String[] words = command.split("\\s+");
-        this.bank.withdrawFromAccount(Integer.parseInt(words[1]), Double.parseDouble(words[2]));
+        this.bank.withdrawFromAccount(Integer.parseInt(words[1]), Double.parseDouble(words[2]), command);
     }
 }

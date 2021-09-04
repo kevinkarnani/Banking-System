@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="banking.MasterControlTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-09-04T06:04:38" hostname="Kevins-MacBook-Pro.local" time="0.142">
+<testsuite name="banking.MasterControlTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2021-09-04T21:31:27" hostname="Kevins-MacBook-Pro.local" time="0.05">
   <properties/>
-  <testcase name="typo_in_withdraw_command_is_invalid()" classname="banking.MasterControlTest" time="0.06"/>
+  <testcase name="typo_in_withdraw_command_is_invalid()" classname="banking.MasterControlTest" time="0.015"/>
   <testcase name="typo_in_pass_command_is_invalid()" classname="banking.MasterControlTest" time="0.001"/>
-  <testcase name="invalid_to_create_accounts_with_same_ID()" classname="banking.MasterControlTest" time="0.04"/>
-  <testcase name="sample_make_sure_this_passes_unchanged_or_you_will_fail()" classname="banking.MasterControlTest" time="0.016"/>
-  <testcase name="typo_in_create_command_is_invalid()" classname="banking.MasterControlTest" time="0.001"/>
-  <testcase name="typo_in_transfer_command_is_invalid()" classname="banking.MasterControlTest" time="0.001"/>
-  <testcase name="valid_commands_return_nothing()" classname="banking.MasterControlTest" time="0.004"/>
-  <testcase name="typo_in_deposit_command_is_invalid()" classname="banking.MasterControlTest" time="0.002"/>
-  <testcase name="two_typo_commands_both_invalid()" classname="banking.MasterControlTest" time="0.001"/>
+  <testcase name="invalid_to_create_accounts_with_same_ID()" classname="banking.MasterControlTest" time="0.002"/>
+  <testcase name="sample_make_sure_this_passes_unchanged_or_you_will_fail()" classname="banking.MasterControlTest" time="0.006"/>
+  <testcase name="typo_in_create_command_is_invalid()" classname="banking.MasterControlTest" time="0.002"/>
+  <testcase name="typo_in_transfer_command_is_invalid()" classname="banking.MasterControlTest" time="0.0"/>
+  <testcase name="valid_commands_return_nothing()" classname="banking.MasterControlTest" time="0.001"/>
+  <testcase name="test()" classname="banking.MasterControlTest" time="0.009"/>
+  <testcase name="typo_in_deposit_command_is_invalid()" classname="banking.MasterControlTest" time="0.001"/>
+  <testcase name="two_typo_commands_both_invalid()" classname="banking.MasterControlTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

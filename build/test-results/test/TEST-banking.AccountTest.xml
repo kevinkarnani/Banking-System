@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="banking.AccountTest" tests="32" skipped="0" failures="0" errors="0" timestamp="2021-09-04T21:31:26" hostname="Kevins-MacBook-Pro.local" time="0.075">
+  <properties/>
+  <testcase name="transfer_limit_for_checking_is_400()" classname="banking.AccountTest" time="0.001"/>
+  <testcase name="checking_over_max_withdraw_is_invalid()" classname="banking.AccountTest" time="0.001"/>
+  <testcase name="savings_max_withdraw_is_1000()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="transfer_limit_for_savings_is_1000()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="checking_max_deposit_is_1000()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="cannot_transfer_from_CD()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="default_savings_account_balance()" classname="banking.AccountTest" time="0.001"/>
+  <testcase name="withdraw_before_12_months_is_invalid()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="savings_withdraw_twice_per_month_is_invalid()" classname="banking.AccountTest" time="0.001"/>
+  <testcase name="cd_deposit_is_invalid()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="withdraw()" classname="banking.AccountTest" time="0.001"/>
+  <testcase name="checking_max_withdraw_is_400()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="withdraw_more_than_balance_from_cd_after_12_months()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="withdraw_twice()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="transfer_checking_above_400()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="checking_over_max_deposit_is_invalid()" classname="banking.AccountTest" time="0.003"/>
+  <testcase name="withdraw_zero_is_valid()" classname="banking.AccountTest" time="0.001"/>
+  <testcase name="deposit_2500_into_savings_is_valid()" classname="banking.AccountTest" time="0.001"/>
+  <testcase name="savings_over_max_withdraw_is_invalid()" classname="banking.AccountTest" time="0.001"/>
+  <testcase name="savings_over_max_deposit_is_invalid()" classname="banking.AccountTest" time="0.001"/>
+  <testcase name="deposit_twice()" classname="banking.AccountTest" time="0.005"/>
+  <testcase name="savings_max_deposit_is_2500()" classname="banking.AccountTest" time="0.004"/>
+  <testcase name="withdraw_0_is_valid()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="withdraw_half_from_cd_after_12_months_is_invalid()" classname="banking.AccountTest" time="0.003"/>
+  <testcase name="default_cd_account_balance()" classname="banking.AccountTest" time="0.001"/>
+  <testcase name="deposit()" classname="banking.AccountTest" time="0.001"/>
+  <testcase name="withdraw_more_than_balance()" classname="banking.AccountTest" time="0.001"/>
+  <testcase name="transfer_savings_above_1000()" classname="banking.AccountTest" time="0.001"/>
+  <testcase name="withdraw_all_from_cd_after_12_months()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="default_checking_account_balance()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="withdraw_below_0_ends_in_0()" classname="banking.AccountTest" time="0.0"/>
+  <testcase name="deposit_1000_into_checking_is_valid()" classname="banking.AccountTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
