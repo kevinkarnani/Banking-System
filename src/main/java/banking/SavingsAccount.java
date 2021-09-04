@@ -26,4 +26,9 @@ public class SavingsAccount extends Account {
         super.passTime();
         this.withdrawnThisMonth = false;
     }
+
+    @Override
+    public String getClassType() {
+        return "Savings";
+    }
 }

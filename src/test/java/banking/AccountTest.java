@@ -150,6 +150,11 @@ public class AccountTest {
     }
 
     @Test
+    public void cd_deposit_is_invalid() {
+        assertFalse(this.cdAccount.validDepositAmount(1000));
+    }
+
+    @Test
     public void checking_over_max_withdraw_is_invalid() {
         assertFalse(this.checkingAccount.validWithdrawAmount(5000));
     }

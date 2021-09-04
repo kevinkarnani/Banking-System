@@ -1,16 +1,16 @@
 package banking;
 
-import java.util.HashMap;
+import java.util.TreeMap;
 
 public class Bank {
-    public HashMap<Integer, Account> accounts;
+    public TreeMap<Integer, Account> accounts;
     public int minCDAmount = 1000;
     public int maxCDAmount = 10000;
     public int minAPR = 0;
     public int maxAPR = 10;
 
     public Bank() {
-        this.accounts = new HashMap<>();
+        this.accounts = new TreeMap<>();
     }
 
     public void createCheckingAccount(int uuid, double apr) {
@@ -72,5 +72,10 @@ public class Bank {
     public boolean validTransfer(int uuidOrigin, int uuidRecipient, double amount) {
         return this.accounts.get(uuidOrigin).validTransferAmount(amount) &&
                 this.accounts.get(uuidRecipient).validDepositAmount(amount);
+    }
+
+    public String getStateOfAccount(int id) {
+        return this.accounts.get(id).getClassType() + String.format(" %d %.2f %.2f", id, this.accounts.get(id).
+                getAmount(), this.accounts.get(id).apr);
     }
 }

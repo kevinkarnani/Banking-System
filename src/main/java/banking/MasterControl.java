@@ -7,6 +7,7 @@ public class MasterControl {
     CommandValidator commandValidator;
     CommandProcessor commandProcessor;
     CommandStorage commandStorage;
+    OutputFormatter outputFormatter;
 
     public MasterControl(Bank bank, CommandValidator commandValidator, CommandProcessor commandProcessor,
                          CommandStorage commandStorage) {
@@ -14,16 +15,20 @@ public class MasterControl {
         this.commandValidator = commandValidator;
         this.commandProcessor = commandProcessor;
         this.commandStorage = commandStorage;
+        this.outputFormatter = new OutputFormatter(this.bank);
     }
 
     public List<String> start(List<String> input) {
         for (String command : input) {
             if (this.commandValidator.validateCommand(command)) {
                 this.commandProcessor.processCommand(command);
+                this.commandStorage.addValidCommand(command);
             } else {
                 this.commandStorage.addInvalidCommand(command);
             }
         }
-        return this.commandStorage.getInvalidCommands();
+        List<String> output = this.outputFormatter.format(this.commandStorage.getValidCommands());
+        output.addAll(this.commandStorage.getInvalidCommands());
+        return output;
     }
 }

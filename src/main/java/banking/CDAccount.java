@@ -6,8 +6,6 @@ public class CDAccount extends Account {
     public CDAccount(double amount, double apr) {
         this.amount = amount;
         this.apr = apr;
-        this.maxDeposit = -1;
-        this.maxWithdraw = -1;
     }
 
     @Override
@@ -19,8 +17,13 @@ public class CDAccount extends Account {
     }
 
     @Override
+    public boolean validDepositAmount(double amount) {
+        return false;
+    }
+
+    @Override
     public boolean validWithdrawAmount(double amount) {
-        return super.validWithdrawAmount(amount) || (this.months >= 12 && amount >= this.amount && !this.withdrawn);
+        return this.months >= 12 && amount >= this.amount && !this.withdrawn;
     }
 
     @Override
@@ -32,5 +35,10 @@ public class CDAccount extends Account {
     @Override
     public boolean validTransferAmount(double amount) {
         return false;
+    }
+
+    @Override
+    public String getClassType() {
+        return "Cd";
     }
 }

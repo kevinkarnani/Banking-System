@@ -15,7 +15,7 @@ public class PassTimeValidatorTest {
     }
 
     @Test
-    public void pass_time_between_1_and_60_is_valid() {
+    public void pass_time_between_1_and_60() {
         assertTrue(this.commandValidator.validate("Pass 34"));
     }
 
@@ -40,7 +40,7 @@ public class PassTimeValidatorTest {
     }
 
     @Test
-    public void pass_time_decimal_is_invalid() {
+    public void pass_time_non_whole_number() {
         assertFalse(this.commandValidator.validate("Pass 1.5"));
     }
 
@@ -62,5 +62,10 @@ public class PassTimeValidatorTest {
     @Test
     public void pass_time_time_is_alphanumeric() {
         assertFalse(this.commandValidator.validate("pass a1"));
+    }
+
+    @Test
+    public void pass_time_time_has_decimal() {
+        assertFalse(this.commandValidator.validate("pass 6.0"));
     }
 }

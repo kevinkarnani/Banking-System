@@ -7,4 +7,9 @@ public class CheckingAccount extends Account {
         this.maxDeposit = 1000;
         this.maxWithdraw = 400;
     }
+
+    @Override
+    public String getClassType() {
+        return "Checking";
+    }
 }

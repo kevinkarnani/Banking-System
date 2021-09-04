@@ -43,6 +43,8 @@ public abstract class Account {
         this.months += 1;
     }
 
+    public abstract String getClassType();
+
     public void calculateAPR() {
         this.amount += (this.apr / 100) / 12 * this.amount;
     }
