@@ -1,13 +1,13 @@
-banking/AccountTest.java
- banking.AccountTest
 banking/PassTimeValidatorTest.java
  banking.PassTimeValidatorTest
 banking/CommandStorageTest.java
  banking.CommandStorageTest
+banking/AccountTest.java
+ banking.AccountTest
 banking/DepositValidatorTest.java
  banking.DepositValidatorTest
-banking/WithdrawValidatorTest.java
- banking.WithdrawValidatorTest
+banking/TransferProcessorTest.java
+ banking.TransferProcessorTest
 banking/CreateValidatorTest.java
  banking.CreateValidatorTest
 banking/WithdrawProcessorTest.java
@@ -20,9 +20,9 @@ banking/TransferValidatorTest.java
  banking.TransferValidatorTest
 banking/CreateProcessorTest.java
  banking.CreateProcessorTest
-banking/TransferProcessorTest.java
- banking.TransferProcessorTest
-banking/BankTest.java
- banking.BankTest
 banking/MasterControlTest.java
  banking.MasterControlTest
+banking/WithdrawValidatorTest.java
+ banking.WithdrawValidatorTest
+banking/BankTest.java
+ banking.BankTest

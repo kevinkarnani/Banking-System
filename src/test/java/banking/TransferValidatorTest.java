@@ -13,9 +13,9 @@ public class TransferValidatorTest {
     @BeforeEach
     public void setUp() {
         this.bank = new Bank();
-        this.bank.createSavingsAccount(12345678, 1);
-        this.bank.createCheckingAccount(23456789, 1);
-        this.bank.createCDAccount(34567890, 1000, 1);
+        this.bank.createAccount(12345678, 1, "checking");
+        this.bank.createAccount(23456789, 1, "savings");
+        this.bank.createAccount(34567890, 1000, 1);
         this.commandValidator = new TransferValidator(bank);
     }
 

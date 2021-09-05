@@ -9,12 +9,10 @@ public class CreateProcessor extends Processor {
     public void process(String command) {
         String[] words = command.toLowerCase().split("\\s+");
 
-        if (words[1].equals("checking")) {
-            this.bank.createCheckingAccount(Integer.parseInt(words[2]), Double.parseDouble(words[3]));
-        } else if (words[1].equals("savings")) {
-            this.bank.createSavingsAccount(Integer.parseInt(words[2]), Double.parseDouble(words[3]));
+        if (words.length == 4) {
+            this.bank.createAccount(Integer.parseInt(words[2]), Double.parseDouble(words[3]), words[1]);
         } else {
-            this.bank.createCDAccount(Integer.parseInt(words[2]), Double.parseDouble(words[4]), Double.parseDouble(words[3]));
+            this.bank.createAccount(Integer.parseInt(words[2]), Double.parseDouble(words[4]), Double.parseDouble(words[3]));
         }
     }
 }

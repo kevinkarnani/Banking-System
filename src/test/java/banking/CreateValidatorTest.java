@@ -43,40 +43,40 @@ public class CreateValidatorTest {
 
     @Test
     public void create_savings_one() {
-        this.bank.createSavingsAccount(12345678, 0.1);
+        this.bank.createAccount(12345678, 0.1, "savings");
         assertTrue(this.commandValidator.validate("Create savings 23456789 0.6"));
     }
 
     @Test
     public void create_checking_one() {
-        this.bank.createCheckingAccount(12345678, 0.1);
+        this.bank.createAccount(12345678, 0.1, "checking");
         assertTrue(this.commandValidator.validate("Create checking 23456789 0.01"));
     }
 
     @Test
     public void create_cd_one() {
-        this.bank.createCDAccount(12345678, 2000, 0.1);
+        this.bank.createAccount(12345678, 2000, 0.1);
         assertTrue(this.commandValidator.validate("Create cd 23456789 1.2 2000"));
     }
 
     @Test
     public void create_savings_many() {
-        this.bank.createSavingsAccount(12345678, 0.1);
-        this.bank.createSavingsAccount(23456789, 0.1);
+        this.bank.createAccount(12345678, 0.1, "savings");
+        this.bank.createAccount(23456789, 0.1, "savings");
         assertTrue(this.commandValidator.validate("Create savings 34567890 0.6"));
     }
 
     @Test
     public void create_checking_many() {
-        this.bank.createCheckingAccount(12345678, 0.1);
-        this.bank.createCheckingAccount(23456789, 0.1);
+        this.bank.createAccount(12345678, 0.1, "checking");
+        this.bank.createAccount(23456789, 0.1, "checking");
         assertTrue(this.commandValidator.validate("Create checking 34567890 0.01"));
     }
 
     @Test
     public void create_cd_many() {
-        this.bank.createCDAccount(12345678, 2000, 0.1);
-        this.bank.createCDAccount(23456789, 2000, 0.1);
+        this.bank.createAccount(12345678, 2000, 0.1);
+        this.bank.createAccount(23456789, 2000, 0.1);
         assertTrue(this.commandValidator.validate("Create cd 34567890 1.2 2000"));
     }
 
@@ -102,19 +102,19 @@ public class CreateValidatorTest {
 
     @Test
     public void create_savings_already_exists() {
-        this.bank.createSavingsAccount(12345678, 0.1);
+        this.bank.createAccount(12345678, 0.1, "savings");
         assertFalse(this.commandValidator.validate("Create savings 12345678 0.6"));
     }
 
     @Test
     public void create_checking_already_exists() {
-        this.bank.createCheckingAccount(12345678, 0.1);
+        this.bank.createAccount(12345678, 0.1, "checking");
         assertFalse(this.commandValidator.validate("Create checking 12345678 0.01"));
     }
 
     @Test
     public void create_cd_already_exists() {
-        this.bank.createCDAccount(12345678, 2000, 0.1);
+        this.bank.createAccount(12345678, 2000, 0.1);
         assertFalse(this.commandValidator.validate("Create cd 12345678 1.2 2000"));
     }
 

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="banking.PassTimeProcessorTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-09-04T21:31:26" hostname="Kevins-MacBook-Pro.local" time="0.008">
+<testsuite name="banking.PassTimeProcessorTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-09-05T01:18:52" hostname="Kevins-MacBook-Pro.local" time="0.019">
   <properties/>
-  <testcase name="pass_time_leading_to_deleting_account()" classname="banking.PassTimeProcessorTest" time="0.0"/>
-  <testcase name="pass_time_case_insensitive()" classname="banking.PassTimeProcessorTest" time="0.002"/>
-  <testcase name="pass_time_CD_account()" classname="banking.PassTimeProcessorTest" time="0.0"/>
-  <testcase name="pass_time_leads_to_no_balance()" classname="banking.PassTimeProcessorTest" time="0.0"/>
-  <testcase name="pass_time_checking_account()" classname="banking.PassTimeProcessorTest" time="0.0"/>
-  <testcase name="pass_time_empty_accounts()" classname="banking.PassTimeProcessorTest" time="0.001"/>
-  <testcase name="pass_time_savings_account()" classname="banking.PassTimeProcessorTest" time="0.0"/>
+  <testcase name="pass_time_leading_to_deleting_account()" classname="banking.PassTimeProcessorTest" time="0.001"/>
+  <testcase name="pass_time_case_insensitive()" classname="banking.PassTimeProcessorTest" time="0.001"/>
+  <testcase name="pass_time_CD_account()" classname="banking.PassTimeProcessorTest" time="0.002"/>
+  <testcase name="pass_time_leads_to_no_balance()" classname="banking.PassTimeProcessorTest" time="0.001"/>
+  <testcase name="pass_time_checking_account()" classname="banking.PassTimeProcessorTest" time="0.001"/>
+  <testcase name="pass_time_empty_accounts()" classname="banking.PassTimeProcessorTest" time="0.002"/>
+  <testcase name="pass_time_savings_account()" classname="banking.PassTimeProcessorTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -17,18 +17,13 @@ public class Bank {
         this.accountHistory = new LinkedHashMap<>();
     }
 
-    public void createCheckingAccount(int uuid, double apr) {
-        this.accounts.put(uuid, new CheckingAccount(apr));
+    public void createAccount(int uuid, double amount, double apr) {
+        this.accounts.put(uuid, new AccountFactory().create(amount, apr));
         this.addAccountToHistory(uuid);
     }
 
-    public void createSavingsAccount(int uuid, double apr) {
-        this.accounts.put(uuid, new SavingsAccount(apr));
-        this.addAccountToHistory(uuid);
-    }
-
-    public void createCDAccount(int uuid, double amount, double apr) {
-        this.accounts.put(uuid, new CDAccount(amount, apr));
+    public void createAccount(int uuid, double apr, String type) {
+        this.accounts.put(uuid, new AccountFactory().create(apr, type));
         this.addAccountToHistory(uuid);
     }
 

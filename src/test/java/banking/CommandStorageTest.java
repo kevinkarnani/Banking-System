@@ -43,14 +43,14 @@ public class CommandStorageTest {
 
     @Test
     public void create_command() {
-        this.bank.createCheckingAccount(12345678, 0.1);
+        this.bank.createAccount(12345678, 0.1, "checking");
         this.output.add("Checking 12345678 0.00 0.10");
         assertEquals(this.commandStorage.getFormattedHistory(this.bank), this.output);
     }
 
     @Test
     public void deposit_command() {
-        this.bank.createCheckingAccount(12345678, 0.1);
+        this.bank.createAccount(12345678, 0.1, "checking");
         this.bank.depositIntoAccount(12345678, 100);
         this.bank.addCommandToHistory(12345678, "Deposit 12345678 100");
         this.output.add("Checking 12345678 100.00 0.10");
@@ -60,7 +60,7 @@ public class CommandStorageTest {
 
     @Test
     public void withdraw_command() {
-        this.bank.createCheckingAccount(12345678, 0.1);
+        this.bank.createAccount(12345678, 0.1, "checking");
         this.bank.depositIntoAccount(12345678, 100);
         this.bank.withdrawFromAccount(12345678, 50);
         this.bank.addCommandToHistory(12345678, "Deposit 12345678 100");
@@ -73,9 +73,9 @@ public class CommandStorageTest {
 
     @Test
     public void transfer_command() {
-        this.bank.createCheckingAccount(12345678, 0.1);
+        this.bank.createAccount(12345678, 0.1, "checking");
         this.bank.depositIntoAccount(12345678, 100);
-        this.bank.createSavingsAccount(23456789, 0.1);
+        this.bank.createAccount(23456789, 0.1, "savings");
         this.bank.depositIntoAccount(23456789, 100);
         this.bank.transfer(12345678, 23456789, 100);
         this.bank.addCommandToHistory(12345678, "Deposit 12345678 100");
@@ -93,9 +93,9 @@ public class CommandStorageTest {
 
     @Test
     public void pass_command() {
-        this.bank.createSavingsAccount(12345678, 0.6);
+        this.bank.createAccount(12345678, 0.6, "savings");
         this.bank.depositIntoAccount(12345678, 700);
-        this.bank.createCheckingAccount(98765432, 0.01);
+        this.bank.createAccount(98765432, 0.01, "checking");
         this.bank.depositIntoAccount(98765432, 300);
         this.bank.transfer(98765432, 12345678, 300);
         this.bank.addCommandToHistory(12345678, "Deposit 12345678 700");
@@ -103,7 +103,7 @@ public class CommandStorageTest {
         this.bank.addCommandToHistory(98765432, "Transfer 98765432 12345678 300");
         this.bank.addCommandToHistory(12345678, "Transfer 98765432 12345678 300");
         this.bank.passTime(1);
-        this.bank.createCDAccount(23456789, 2000, 1.2);
+        this.bank.createAccount(23456789, 2000, 1.2);
         this.output.add("Savings 12345678 1000.50 0.60");
         this.output.add("Deposit 12345678 700");
         this.output.add("Transfer 98765432 12345678 300");

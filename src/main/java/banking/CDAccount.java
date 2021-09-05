@@ -1,7 +1,7 @@
 package banking;
 
 public class CDAccount extends Account {
-    private boolean withdrawn = false;
+    public boolean withdrawn = false;
 
     public CDAccount(double amount, double apr) {
         this.amount = amount;

@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="banking.MasterControlTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2021-09-04T21:31:27" hostname="Kevins-MacBook-Pro.local" time="0.05">
+<testsuite name="banking.MasterControlTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2021-09-05T01:18:52" hostname="Kevins-MacBook-Pro.local" time="0.077">
   <properties/>
-  <testcase name="typo_in_withdraw_command_is_invalid()" classname="banking.MasterControlTest" time="0.015"/>
+  <testcase name="typo_in_withdraw_command_is_invalid()" classname="banking.MasterControlTest" time="0.016"/>
+  <testcase name="withdraw_command()" classname="banking.MasterControlTest" time="0.003"/>
   <testcase name="typo_in_pass_command_is_invalid()" classname="banking.MasterControlTest" time="0.001"/>
   <testcase name="invalid_to_create_accounts_with_same_ID()" classname="banking.MasterControlTest" time="0.002"/>
-  <testcase name="sample_make_sure_this_passes_unchanged_or_you_will_fail()" classname="banking.MasterControlTest" time="0.006"/>
-  <testcase name="typo_in_create_command_is_invalid()" classname="banking.MasterControlTest" time="0.002"/>
-  <testcase name="typo_in_transfer_command_is_invalid()" classname="banking.MasterControlTest" time="0.0"/>
-  <testcase name="valid_commands_return_nothing()" classname="banking.MasterControlTest" time="0.001"/>
-  <testcase name="test()" classname="banking.MasterControlTest" time="0.009"/>
+  <testcase name="sample_make_sure_this_passes_unchanged_or_you_will_fail()" classname="banking.MasterControlTest" time="0.002"/>
+  <testcase name="typo_in_create_command_is_invalid()" classname="banking.MasterControlTest" time="0.0"/>
+  <testcase name="typo_in_transfer_command_is_invalid()" classname="banking.MasterControlTest" time="0.001"/>
+  <testcase name="valid_commands_return_nothing()" classname="banking.MasterControlTest" time="0.003"/>
+  <testcase name="pass_command()" classname="banking.MasterControlTest" time="0.0"/>
+  <testcase name="deposit_command()" classname="banking.MasterControlTest" time="0.002"/>
+  <testcase name="create_command()" classname="banking.MasterControlTest" time="0.003"/>
+  <testcase name="deleted_account_does_not_have_history()" classname="banking.MasterControlTest" time="0.007"/>
+  <testcase name="transfer_command()" classname="banking.MasterControlTest" time="0.005"/>
   <testcase name="typo_in_deposit_command_is_invalid()" classname="banking.MasterControlTest" time="0.001"/>
   <testcase name="two_typo_commands_both_invalid()" classname="banking.MasterControlTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

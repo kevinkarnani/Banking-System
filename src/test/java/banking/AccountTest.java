@@ -98,6 +98,47 @@ public class AccountTest {
     }
 
     @Test
+    public void withdraw_from_cd() {
+        this.cdAccount.withdraw(this.cdAccount.getAmount());
+        assertEquals(this.cdAccount.getAmount(), 0);
+    }
+
+    @Test
+    public void pass_time_checking() {
+        this.checkingAccount.deposit(100);
+        this.checkingAccount.passTime();
+        assertEquals(this.checkingAccount.getAmount(), 100.01, 0.01);
+    }
+
+    @Test
+    public void pass_time_savings() {
+        this.savingsAccount.deposit(100);
+        this.savingsAccount.passTime();
+        assertEquals(this.savingsAccount.getAmount(), 100.01, 0.01);
+    }
+
+    @Test
+    public void pass_time_cd() {
+        this.cdAccount.passTime();
+        assertEquals(this.cdAccount.getAmount(), 100.03, 0.01);
+    }
+
+    @Test
+    public void checking_class() {
+        assertEquals(this.checkingAccount.getClassType(), "Checking");
+    }
+
+    @Test
+    public void savings_class() {
+        assertEquals(this.savingsAccount.getClassType(), "Savings");
+    }
+
+    @Test
+    public void cd_class() {
+        assertEquals(this.cdAccount.getClassType(), "Cd");
+    }
+
+    @Test
     public void checking_max_deposit_is_1000() {
         assertTrue(this.checkingAccount.validDepositAmount(1000));
     }

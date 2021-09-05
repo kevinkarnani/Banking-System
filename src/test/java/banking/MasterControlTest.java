@@ -105,6 +105,62 @@ public class MasterControlTest {
     }
 
     @Test
+    public void create_command() {
+        this.input.add("create checking 12345678 .1");
+        this.output.add("Checking 12345678 0.00 0.10");
+
+        List<String> actual = this.masterControl.start(this.input);
+        assertSingleCommand("Checking 12345678 0.00 0.10", actual);
+    }
+
+    @Test
+    public void deposit_command() {
+        this.input.add("create checking 12345678 .1");
+        this.input.add("Deposit 12345678 100");
+        this.output.add("Checking 12345678 100.00 0.10");
+        this.output.add("Deposit 12345678 100");
+
+        List<String> actual = this.masterControl.start(this.input);
+        assertEquals(actual, this.output);
+    }
+
+    @Test
+    public void withdraw_command() {
+        this.input.add("CrEaTe ChEcKiNg 12345678 .1");
+        this.input.add("Deposit 12345678 100");
+        this.input.add("Withdraw 12345678 50");
+        this.output.add("Checking 12345678 50.00 0.10");
+        this.output.add("Deposit 12345678 100");
+        this.output.add("Withdraw 12345678 50");
+
+        List<String> actual = this.masterControl.start(this.input);
+        assertEquals(actual, this.output);
+    }
+
+    @Test
+    public void transfer_command() {
+        this.input.add("create ChEcKiNg 12345678 .1");
+        this.input.add("Deposit 12345678 100");
+        this.input.add("create Savings 23456789 .1");
+        this.input.add("Deposit 23456789 100");
+        this.input.add("Transfer 12345678 23456789 100");
+        this.output.add("Checking 12345678 0.00 0.10");
+        this.output.add("Deposit 12345678 100");
+        this.output.add("Transfer 12345678 23456789 100");
+        this.output.add("Savings 23456789 200.00 0.10");
+        this.output.add("Deposit 23456789 100");
+        this.output.add("Transfer 12345678 23456789 100");
+
+        List<String> actual = this.masterControl.start(this.input);
+        assertEquals(actual, this.output);
+    }
+
+    @Test
+    public void pass_command() {
+
+    }
+
+    @Test
     void sample_make_sure_this_passes_unchanged_or_you_will_fail() {
         this.input.add("Create savings 12345678 0.6");
         this.input.add("Deposit 12345678 700");
@@ -125,7 +181,7 @@ public class MasterControlTest {
     }
 
     @Test
-    public void test() {
+    public void deleted_account_does_not_have_history() {
         this.input.add("Create checking 12345678 0.6");
         this.input.add("Deposit 12345678 100");
         this.input.add("Withdraw 12345678 100");

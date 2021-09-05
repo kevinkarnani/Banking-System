@@ -48,7 +48,7 @@ public class CreateProcessorTest {
 
     @Test
     public void create_savings_one() {
-        bank.createSavingsAccount(12345678, 0.1);
+        this.bank.createAccount(12345678, .1, "savings");
         this.createProcessor.process("Create savings 23456789 0.6");
         assertTrue(this.bank.accountExists(23456789));
         assertEquals(this.bank.accounts.size(), 2);
@@ -56,7 +56,7 @@ public class CreateProcessorTest {
 
     @Test
     public void create_checking_one() {
-        bank.createCheckingAccount(12345678, 0.1);
+        this.bank.createAccount(12345678, .1, "checking");
         this.createProcessor.process("Create checking 23456789 0.01");
         assertTrue(this.bank.accountExists(23456789));
         assertEquals(this.bank.accounts.size(), 2);
@@ -64,7 +64,7 @@ public class CreateProcessorTest {
 
     @Test
     public void create_cd_one() {
-        bank.createCDAccount(12345678, 2000, 0.1);
+        this.bank.createAccount(12345678, 2000, 0.1);
         this.createProcessor.process("Create cd 23456789 1.2 2000");
         assertTrue(this.bank.accountExists(23456789));
         assertEquals(this.bank.accounts.size(), 2);
@@ -72,8 +72,8 @@ public class CreateProcessorTest {
 
     @Test
     public void create_savings_many() {
-        bank.createSavingsAccount(12345678, 0.1);
-        bank.createSavingsAccount(23456789, 0.1);
+        this.bank.createAccount(12345678, .1, "savings");
+        this.bank.createAccount(23456789, .1, "savings");
         this.createProcessor.process("Create savings 34567890 0.6");
         assertTrue(this.bank.accountExists(34567890));
         assertEquals(this.bank.accounts.size(), 3);
@@ -81,8 +81,8 @@ public class CreateProcessorTest {
 
     @Test
     public void create_checking_many() {
-        bank.createCheckingAccount(12345678, 0.1);
-        bank.createCheckingAccount(23456789, 0.1);
+        this.bank.createAccount(12345678, .1, "checking");
+        this.bank.createAccount(23456789, .1, "checking");
         this.createProcessor.process("Create checking 34567890 0.01");
         assertTrue(this.bank.accountExists(34567890));
         assertEquals(this.bank.accounts.size(), 3);
@@ -90,8 +90,8 @@ public class CreateProcessorTest {
 
     @Test
     public void create_cd_many() {
-        bank.createCDAccount(12345678, 2000, 0.1);
-        bank.createCDAccount(23456789, 2000, 0.1);
+        this.bank.createAccount(12345678, 2000, 0.1);
+        this.bank.createAccount(23456789, 2000, 0.1);
         this.createProcessor.process("Create cd 34567890 1.2 2000");
         assertTrue(this.bank.accountExists(34567890));
         assertEquals(this.bank.accounts.size(), 3);

@@ -12,8 +12,8 @@ public class TransferProcessorTest {
     @BeforeEach
     public void setUp() {
         this.bank = new Bank();
-        this.bank.createCheckingAccount(12345678, 1);
-        this.bank.createSavingsAccount(23456789, 1);
+        this.bank.createAccount(12345678, 1, "checking");
+        this.bank.createAccount(23456789, 1, "savings");
         this.bank.depositIntoAccount(12345678, 100);
         this.bank.depositIntoAccount(23456789, 100);
         this.transferProcessor = new TransferProcessor(this.bank);

@@ -11,60 +11,65 @@ public class BankTest {
     @BeforeEach
     public void setUp() {
         this.bank = new Bank();
+        this.bank.createAccount(12345678, .1, "checking");
+        this.bank.createAccount(23456789, .1, "savings");
+        this.bank.createAccount(34567890, 100, .1);
     }
 
     @Test
     public void empty_bank() {
+        this.bank.accounts.clear();
+        this.bank.accountHistory.clear();
         assertEquals(this.bank.accounts.size(), 0);
     }
 
     @Test
     public void create_checking_account() {
-        this.bank.createCheckingAccount(12345678, .1);
+        this.bank.accounts.clear();
+        this.bank.accountHistory.clear();
+        this.bank.createAccount(12345678, .1, "checking");
         assertEquals(this.bank.accounts.size(), 1);
         assertEquals(this.bank.accountHistory.size(), 1);
     }
 
     @Test
     public void create_savings_account() {
-        this.bank.createSavingsAccount(12345678, .1);
+        this.bank.accounts.clear();
+        this.bank.accountHistory.clear();
+        this.bank.createAccount(23456789, .1, "savings");
         assertEquals(this.bank.accounts.size(), 1);
         assertEquals(this.bank.accountHistory.size(), 1);
     }
 
     @Test
     public void create_cd_account() {
-        this.bank.createCDAccount(12345678, 100, .1);
+        this.bank.accounts.clear();
+        this.bank.accountHistory.clear();
+        this.bank.createAccount(34567890, 100, .1);
         assertEquals(this.bank.accounts.size(), 1);
         assertEquals(this.bank.accountHistory.size(), 1);
     }
 
     @Test
     public void create_multiple() {
-        this.bank.createCheckingAccount(1234567, .1);
-        this.bank.createCDAccount(12345679, 100, .1);
-        this.bank.createSavingsAccount(123456780, .1);
         assertEquals(this.bank.accounts.size(), 3);
     }
 
     @Test
     public void deposit_into_account() {
-        this.bank.createSavingsAccount(12345678, .1);
-        this.bank.depositIntoAccount(12345678, 100);
-        assertEquals(this.bank.accounts.get(12345678).getAmount(), 100);
+        this.bank.depositIntoAccount(23456789, 100);
+        assertEquals(this.bank.accounts.get(23456789).getAmount(), 100);
     }
 
     @Test
     public void deposit_into_account_with_history() {
-        this.bank.createSavingsAccount(12345678, .1);
-        this.bank.depositIntoAccount(12345678, 100, "Deposit 12345678 100");
-        assertEquals(this.bank.accounts.get(12345678).getAmount(), 100);
-        assertEquals(this.bank.accountHistory.get(12345678).get(0), "Deposit 12345678 100");
+        this.bank.depositIntoAccount(23456789, 100, "Deposit 23456789 100");
+        assertEquals(this.bank.accounts.get(23456789).getAmount(), 100);
+        assertEquals(this.bank.accountHistory.get(23456789).get(0), "Deposit 23456789 100");
     }
 
     @Test
     public void withdraw_from_account() {
-        this.bank.createCheckingAccount(12345678, .1);
         this.bank.depositIntoAccount(12345678, 100);
         this.bank.withdrawFromAccount(12345678, 70);
         assertEquals(this.bank.accounts.get(12345678).getAmount(), 30);
@@ -72,7 +77,6 @@ public class BankTest {
 
     @Test
     public void withdraw_from_account_with_history() {
-        this.bank.createCheckingAccount(12345678, .1);
         this.bank.depositIntoAccount(12345678, 100, "Deposit 12345678 100");
         this.bank.withdrawFromAccount(12345678, 70, "Withdraw 12345678 70");
         assertEquals(this.bank.accounts.get(12345678).getAmount(), 30);
@@ -81,8 +85,6 @@ public class BankTest {
 
     @Test
     public void transfer_between_checking_and_savings() {
-        this.bank.createCheckingAccount(12345678, 1);
-        this.bank.createSavingsAccount(23456789, 1);
         this.bank.depositIntoAccount(12345678, 100);
         this.bank.transfer(12345678, 23456789, 50);
         assertEquals(this.bank.accounts.get(12345678).getAmount(), 50);
@@ -91,8 +93,6 @@ public class BankTest {
 
     @Test
     public void transfer_between_checking_and_savings_with_history() {
-        this.bank.createCheckingAccount(12345678, 1);
-        this.bank.createSavingsAccount(23456789, 1);
         this.bank.depositIntoAccount(12345678, 100, "Deposit 12345678 100");
         this.bank.transfer(12345678, 23456789, 50, "Transfer 12345678 23456789 50");
         assertEquals(this.bank.accounts.get(12345678).getAmount(), 50);
@@ -104,18 +104,14 @@ public class BankTest {
 
     @Test
     public void transfer_no_overdraft() {
-        this.bank.createCheckingAccount(12345678, 1);
-        this.bank.createSavingsAccount(23456789, 1);
         this.bank.depositIntoAccount(12345678, 100);
-        this.bank.transfer(12345678, 23456789, 200);
+        this.bank.transfer(12345678, 23456789, 101);
         assertEquals(this.bank.accounts.get(12345678).getAmount(), 0);
         assertEquals(this.bank.accounts.get(23456789).getAmount(), 100);
     }
 
     @Test
     public void full_transfer_leads_to_0() {
-        this.bank.createCheckingAccount(12345678, 1);
-        this.bank.createSavingsAccount(23456789, 1);
         this.bank.depositIntoAccount(12345678, 100);
         this.bank.transfer(12345678, 23456789, this.bank.accounts.get(12345678).getAmount());
         assertEquals(this.bank.accounts.get(12345678).getAmount(), 0);
@@ -123,40 +119,63 @@ public class BankTest {
     }
 
     @Test
+    public void get_state_checking() {
+        assertEquals(this.bank.getStateOfAccount(12345678), "Checking 12345678 0.00 0.10");
+    }
+
+    @Test
+    public void get_state_savings() {
+        assertEquals(this.bank.getStateOfAccount(23456789), "Savings 23456789 0.00 0.10");
+    }
+
+    @Test
+    public void get_state_cd() {
+        assertEquals(this.bank.getStateOfAccount(34567890), "Cd 34567890 100.00 0.10");
+    }
+
+    @Test
     public void deposit_into_checking_below_1000() {
-        this.bank.createCheckingAccount(12345678, 1);
         assertTrue(this.bank.accountDepositUnderLimit(1000, 12345678));
     }
 
     @Test
     public void deposit_into_savings_below_2500() {
-        this.bank.createSavingsAccount(12345678, 1);
-        assertTrue(this.bank.accountDepositUnderLimit(2500, 12345678));
+        assertTrue(this.bank.accountDepositUnderLimit(2500, 23456789));
     }
 
     @Test
     public void withdraw_from_checking_below_400() {
-        this.bank.createCheckingAccount(12345678, 1);
         this.bank.depositIntoAccount(12345678, 400);
         assertTrue(this.bank.accountWithdrawUnderLimit(400, 12345678));
     }
 
     @Test
     public void withdraw_from_savings_below_1000() {
-        this.bank.createSavingsAccount(12345678, 1);
-        this.bank.depositIntoAccount(12345678, 1000);
-        assertTrue(this.bank.accountWithdrawUnderLimit(1000, 12345678));
+        this.bank.depositIntoAccount(23456789, 1000);
+        assertTrue(this.bank.accountWithdrawUnderLimit(1000, 23456789));
     }
 
     @Test
-    public void withdraw_from_cd_after_12() {
-        this.bank.createCDAccount(12345678, 100, 0);
+    public void checking_pass_time() {
+        this.bank.accounts.get(12345678).deposit(100);
         this.bank.passTime(12);
         assertTrue(this.bank.accountWithdrawUnderLimit(100, 12345678));
     }
 
     @Test
+    public void savings_pass_time() {
+        this.bank.accounts.get(23456789).deposit(100);
+        this.bank.passTime(12);
+        assertTrue(this.bank.accountWithdrawUnderLimit(100, 23456789));
+    }
 
+    @Test
+    public void withdraw_from_cd_after_12() {
+        this.bank.passTime(12);
+        assertTrue(this.bank.accountWithdrawUnderLimit(this.bank.accounts.get(34567890).getAmount(), 34567890));
+    }
+
+    @Test
     public void min_apr_is_0() {
         assertTrue(this.bank.validateInitialAPR(0));
     }
@@ -178,48 +197,40 @@ public class BankTest {
 
     @Test
     public void transfer_1000_from_savings_to_checking_is_valid() {
-        this.bank.createCheckingAccount(12345678, 1);
-        this.bank.createSavingsAccount(23456789, 1);
         this.bank.depositIntoAccount(23456789, 1000);
         assertTrue(this.bank.validTransfer(23456789, 12345678, 1000));
     }
 
     @Test
     public void deposit_into_checking_above_1000() {
-        this.bank.createCheckingAccount(12345678, 1);
         assertFalse(this.bank.accountDepositUnderLimit(1001, 12345678));
     }
 
     @Test
     public void deposit_into_savings_above_2500() {
-        this.bank.createSavingsAccount(12345678, 1);
-        assertFalse(this.bank.accountDepositUnderLimit(2501, 12345678));
+        assertFalse(this.bank.accountDepositUnderLimit(2501, 23456789));
     }
 
     @Test
     public void deposit_into_cd_not_possible() {
-        this.bank.createCDAccount(12345678, 100, 1);
-        assertFalse(this.bank.accountDepositUnderLimit(100, 12345678));
+        assertFalse(this.bank.accountDepositUnderLimit(100, 34567890));
     }
 
     @Test
     public void withdraw_from_checking_above_400() {
-        this.bank.createCheckingAccount(12345678, 1);
         this.bank.depositIntoAccount(12345678, 401);
         assertFalse(this.bank.accountWithdrawUnderLimit(401, 12345678));
     }
 
     @Test
     public void withdraw_from_savings_above_1000() {
-        this.bank.createSavingsAccount(12345678, 1);
-        this.bank.depositIntoAccount(12345678, 1001);
-        assertFalse(this.bank.accountWithdrawUnderLimit(1001, 12345678));
+        this.bank.depositIntoAccount(23456789, 1001);
+        assertFalse(this.bank.accountWithdrawUnderLimit(1001, 23456789));
     }
 
     @Test
     public void withdraw_from_cd_too_early() {
-        this.bank.createCDAccount(12345678, 100, 1);
-        assertFalse(this.bank.accountWithdrawUnderLimit(100, 12345678));
+        assertFalse(this.bank.accountWithdrawUnderLimit(100, 34567890));
     }
 
     @Test
@@ -244,8 +255,6 @@ public class BankTest {
 
     @Test
     public void transfer_1000_from_checking_to_savings() {
-        this.bank.createCheckingAccount(12345678, 1);
-        this.bank.createSavingsAccount(23456789, 1);
         this.bank.depositIntoAccount(12345678, 1000);
         assertFalse(this.bank.validTransfer(12345678, 23456789, 1000));
     }
