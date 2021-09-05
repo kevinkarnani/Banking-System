@@ -12,11 +12,7 @@ public abstract class Account {
     }
 
     public void withdraw(double amount) {
-        this.amount -= amount;
-
-        if (this.amount < 0) {
-            this.amount = 0;
-        }
+        this.amount = Math.max(0, this.amount - amount);
     }
 
     public double getAmount() {

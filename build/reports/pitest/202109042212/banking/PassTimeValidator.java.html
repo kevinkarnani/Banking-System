@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>PassTimeValidator.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3a8cea24_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package banking;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3a8cea24_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3a8cea24_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class PassTimeValidator extends Validator {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3a8cea24_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public PassTimeValidator() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3a8cea24_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3a8cea24_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3a8cea24_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3a8cea24_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public boolean validate(String command) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3a8cea24_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        command = command.toLowerCase();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3a8cea24_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        String[] words = command.split(&#34;\\s+&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3a8cea24_11'/>
+11
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_11'>4</a>
+<span>
+1. validate : replaced boolean return with true for banking/PassTimeValidator::validate &rarr; KILLED<br/>
+2. validate : negated conditional &rarr; KILLED<br/>
+3. validate : negated conditional &rarr; KILLED<br/>
+4. validate : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return words.length == 2 &#38;&#38; words[0].equals(&#34;pass&#34;) &#38;&#38; words[1].matches(&#34;\\d+&#34;) &#38;&#38;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3a8cea24_12'/>
+12
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_12'>4</a>
+<span>
+1. validate : changed conditional boundary &rarr; KILLED<br/>
+2. validate : changed conditional boundary &rarr; KILLED<br/>
+3. validate : negated conditional &rarr; KILLED<br/>
+4. validate : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                Integer.parseInt(words[1]) &#62;= 1 &#38;&#38; Integer.parseInt(words[1]) &#60;= 60;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3a8cea24_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3a8cea24_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3a8cea24_11'>11</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_11'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>validate<br/><b>Killed by : </b>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_below_1_is_invalid()]</span></span> replaced boolean return with true for banking/PassTimeValidator::validate &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>validate<br/><b>Killed by : </b>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_1_is_valid()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>validate<br/><b>Killed by : </b>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_1_is_valid()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>validate<br/><b>Killed by : </b>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_1_is_valid()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3a8cea24_12'>12</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3a8cea24_12'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>validate<br/><b>Killed by : </b>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_1_is_valid()]</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>validate<br/><b>Killed by : </b>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_60_is_valid()]</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>validate<br/><b>Killed by : </b>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_1_is_valid()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>validate<br/><b>Killed by : </b>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_1_is_valid()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>BOOLEAN_FALSE_RETURN</li>
+<li class='mutator'>BOOLEAN_TRUE_RETURN</li>
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+<li class='mutator'>EMPTY_RETURN_VALUES</li>
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+<li class='mutator'>MATH_MUTATOR</li>
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+<li class='mutator'>NULL_RETURN_VALUES</li>
+<li class='mutator'>PRIMITIVE_RETURN_VALS_MUTATOR</li>
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_is_case_insensitive()] (3 ms)</li><li>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_over_60_is_invalid()] (8 ms)</li><li>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_time_is_alphanumeric()] (5 ms)</li><li>banking.AccountTest.[engine:junit-jupiter]/[class:banking.AccountTest]/[method:cannot_transfer_from_CD()] (37 ms)</li><li>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_60_is_valid()] (2 ms)</li><li>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_time_has_decimal()] (9 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:deposit_command()] (5 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:invalid_to_create_accounts_with_same_ID()] (5 ms)</li><li>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_time_is_missing()] (5 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:typo_in_deposit_command_is_invalid()] (2 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:create_command()] (10 ms)</li><li>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_1_is_valid()] (1 ms)</li><li>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_pass_is_missing()] (4 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:deleted_account_does_not_have_history()] (5 ms)</li><li>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_non_whole_number()] (5 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:two_typo_commands_both_invalid()] (5 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:pass_command()] (2 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:withdraw_command()] (7 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:typo_in_transfer_command_is_invalid()] (2 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:typo_in_withdraw_command_is_invalid()] (1 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:transfer_command()] (8 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:typo_in_create_command_is_invalid()] (2 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:typo_in_pass_command_is_invalid()] (6 ms)</li><li>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_between_1_and_60()] (3 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:valid_commands_return_nothing()] (4 ms)</li><li>banking.PassTimeValidatorTest.[engine:junit-jupiter]/[class:banking.PassTimeValidatorTest]/[method:pass_time_below_1_is_invalid()] (1 ms)</li><li>banking.MasterControlTest.[engine:junit-jupiter]/[class:banking.MasterControlTest]/[method:sample_make_sure_this_passes_unchanged_or_you_will_fail()] (3 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.5.2
+
+</body>
+</html>

@@ -20,9 +20,9 @@ banking/TransferValidatorTest.java
  banking.TransferValidatorTest
 banking/CreateProcessorTest.java
  banking.CreateProcessorTest
-banking/MasterControlTest.java
- banking.MasterControlTest
-banking/WithdrawValidatorTest.java
- banking.WithdrawValidatorTest
 banking/BankTest.java
  banking.BankTest
+banking/WithdrawValidatorTest.java
+ banking.WithdrawValidatorTest
+banking/MasterControlTest.java
+ banking.MasterControlTest

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="banking.CommandStorageTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-09-05T01:18:52" hostname="Kevins-MacBook-Pro.local" time="0.09">
+<testsuite name="banking.CommandStorageTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-09-05T02:12:40" hostname="Kevins-MacBook-Pro.local" time="0.094">
   <properties/>
-  <testcase name="withdraw_command()" classname="banking.CommandStorageTest" time="0.068"/>
-  <testcase name="one_invalid_command()" classname="banking.CommandStorageTest" time="0.001"/>
-  <testcase name="pass_command()" classname="banking.CommandStorageTest" time="0.005"/>
-  <testcase name="deposit_command()" classname="banking.CommandStorageTest" time="0.001"/>
+  <testcase name="withdraw_command()" classname="banking.CommandStorageTest" time="0.066"/>
+  <testcase name="one_invalid_command()" classname="banking.CommandStorageTest" time="0.002"/>
+  <testcase name="pass_command()" classname="banking.CommandStorageTest" time="0.004"/>
+  <testcase name="deposit_command()" classname="banking.CommandStorageTest" time="0.0"/>
   <testcase name="empty_invalid_command()" classname="banking.CommandStorageTest" time="0.001"/>
-  <testcase name="create_command()" classname="banking.CommandStorageTest" time="0.004"/>
+  <testcase name="create_command()" classname="banking.CommandStorageTest" time="0.001"/>
   <testcase name="transfer_command()" classname="banking.CommandStorageTest" time="0.0"/>
   <testcase name="many_invalid_command()" classname="banking.CommandStorageTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>

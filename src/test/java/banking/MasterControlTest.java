@@ -157,7 +157,17 @@ public class MasterControlTest {
 
     @Test
     public void pass_command() {
+        this.input.add("create SaVings 12345678 0.1");
+        this.input.add("deposit 12345678 700");
+        this.input.add("create checking 23456789 0.1");
+        this.input.add("create CD 34567890 1 4000");
+        this.input.add("pass 1");
+        this.output.add("Savings 12345678 700.06 0.10");
+        this.output.add("deposit 12345678 700");
+        this.output.add("Cd 34567890 4013.35 1.00");
 
+        List<String> actual = this.masterControl.start(this.input);
+        assertEquals(actual, this.output);
     }
 
     @Test

@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="banking.CreateValidatorTest" tests="34" skipped="0" failures="0" errors="0" timestamp="2021-09-05T01:18:52" hostname="Kevins-MacBook-Pro.local" time="0.093">
+<testsuite name="banking.CreateValidatorTest" tests="34" skipped="0" failures="0" errors="0" timestamp="2021-09-05T02:12:40" hostname="Kevins-MacBook-Pro.local" time="0.061">
   <properties/>
   <testcase name="create_savings_empty()" classname="banking.CreateValidatorTest" time="0.001"/>
   <testcase name="create_savings_already_exists()" classname="banking.CreateValidatorTest" time="0.002"/>
-  <testcase name="create_savings_missing_create()" classname="banking.CreateValidatorTest" time="0.001"/>
-  <testcase name="create_cd_with_0_APR_is_valid()" classname="banking.CreateValidatorTest" time="0.004"/>
-  <testcase name="create_savings_many()" classname="banking.CreateValidatorTest" time="0.008"/>
+  <testcase name="create_savings_missing_create()" classname="banking.CreateValidatorTest" time="0.002"/>
+  <testcase name="create_cd_with_0_APR_is_valid()" classname="banking.CreateValidatorTest" time="0.002"/>
+  <testcase name="create_savings_many()" classname="banking.CreateValidatorTest" time="0.003"/>
   <testcase name="create_cd_empty()" classname="banking.CreateValidatorTest" time="0.002"/>
-  <testcase name="create_checking_one()" classname="banking.CreateValidatorTest" time="0.001"/>
-  <testcase name="create_savings_empty_zero_not_appended()" classname="banking.CreateValidatorTest" time="0.001"/>
-  <testcase name="create_savings_missing_account_type()" classname="banking.CreateValidatorTest" time="0.0"/>
+  <testcase name="create_checking_one()" classname="banking.CreateValidatorTest" time="0.0"/>
+  <testcase name="create_savings_empty_zero_not_appended()" classname="banking.CreateValidatorTest" time="0.0"/>
+  <testcase name="create_savings_missing_account_type()" classname="banking.CreateValidatorTest" time="0.001"/>
   <testcase name="create_savings_invalid_apr()" classname="banking.CreateValidatorTest" time="0.001"/>
-  <testcase name="create_savings_over_max_apr()" classname="banking.CreateValidatorTest" time="0.002"/>
+  <testcase name="create_savings_over_max_apr()" classname="banking.CreateValidatorTest" time="0.001"/>
   <testcase name="create_cd_invalid_amount()" classname="banking.CreateValidatorTest" time="0.001"/>
-  <testcase name="create_checking_empty()" classname="banking.CreateValidatorTest" time="0.0"/>
-  <testcase name="create_cd_many()" classname="banking.CreateValidatorTest" time="0.001"/>
-  <testcase name="create_savings_under_min_apr()" classname="banking.CreateValidatorTest" time="0.0"/>
+  <testcase name="create_checking_empty()" classname="banking.CreateValidatorTest" time="0.001"/>
+  <testcase name="create_cd_many()" classname="banking.CreateValidatorTest" time="0.002"/>
+  <testcase name="create_savings_under_min_apr()" classname="banking.CreateValidatorTest" time="0.001"/>
   <testcase name="create_savings_invalid_id()" classname="banking.CreateValidatorTest" time="0.001"/>
-  <testcase name="create_savings_invalid_account_type()" classname="banking.CreateValidatorTest" time="0.001"/>
+  <testcase name="create_savings_invalid_account_type()" classname="banking.CreateValidatorTest" time="0.0"/>
   <testcase name="create_cd_over_max_initial()" classname="banking.CreateValidatorTest" time="0.002"/>
   <testcase name="create_savings_one()" classname="banking.CreateValidatorTest" time="0.001"/>
   <testcase name="create_savings_invalid_create()" classname="banking.CreateValidatorTest" time="0.0"/>
-  <testcase name="create_cd_with_10000_is_valid()" classname="banking.CreateValidatorTest" time="0.002"/>
+  <testcase name="create_cd_with_10000_is_valid()" classname="banking.CreateValidatorTest" time="0.001"/>
   <testcase name="create_cd_with_10_APR_is_valid()" classname="banking.CreateValidatorTest" time="0.002"/>
-  <testcase name="create_cd_under_min_initial()" classname="banking.CreateValidatorTest" time="0.002"/>
+  <testcase name="create_cd_under_min_initial()" classname="banking.CreateValidatorTest" time="0.0"/>
   <testcase name="create_savings_alphanumeric_id()" classname="banking.CreateValidatorTest" time="0.001"/>
   <testcase name="create_cd_alphanumeric_amount()" classname="banking.CreateValidatorTest" time="0.0"/>
   <testcase name="create_cd_already_exists()" classname="banking.CreateValidatorTest" time="0.001"/>
-  <testcase name="create_checking_many()" classname="banking.CreateValidatorTest" time="0.008"/>
+  <testcase name="create_checking_many()" classname="banking.CreateValidatorTest" time="0.0"/>
   <testcase name="create_savings_missing_apr()" classname="banking.CreateValidatorTest" time="0.0"/>
-  <testcase name="create_cd_missing_amount()" classname="banking.CreateValidatorTest" time="0.001"/>
+  <testcase name="create_cd_missing_amount()" classname="banking.CreateValidatorTest" time="0.0"/>
   <testcase name="create_cd_with_1000_is_valid()" classname="banking.CreateValidatorTest" time="0.0"/>
-  <testcase name="create_savings_missing_id()" classname="banking.CreateValidatorTest" time="0.0"/>
-  <testcase name="create_checking_already_exists()" classname="banking.CreateValidatorTest" time="0.0"/>
+  <testcase name="create_savings_missing_id()" classname="banking.CreateValidatorTest" time="0.002"/>
+  <testcase name="create_checking_already_exists()" classname="banking.CreateValidatorTest" time="0.001"/>
   <testcase name="create_cd_one()" classname="banking.CreateValidatorTest" time="0.001"/>
-  <testcase name="create_savings_empty_case_insensitive()" classname="banking.CreateValidatorTest" time="0.001"/>
+  <testcase name="create_savings_empty_case_insensitive()" classname="banking.CreateValidatorTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

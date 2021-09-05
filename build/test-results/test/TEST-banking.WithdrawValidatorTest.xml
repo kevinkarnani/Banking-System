@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="banking.WithdrawValidatorTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2021-09-05T01:18:52" hostname="Kevins-MacBook-Pro.local" time="0.051">
+<testsuite name="banking.WithdrawValidatorTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2021-09-05T02:12:40" hostname="Kevins-MacBook-Pro.local" time="0.058">
   <properties/>
-  <testcase name="withdraw_invalid_withdraw()" classname="banking.WithdrawValidatorTest" time="0.004"/>
+  <testcase name="withdraw_invalid_withdraw()" classname="banking.WithdrawValidatorTest" time="0.002"/>
   <testcase name="withdraw_checking_with_decimals()" classname="banking.WithdrawValidatorTest" time="0.002"/>
-  <testcase name="withdraw_checking_above_max()" classname="banking.WithdrawValidatorTest" time="0.003"/>
+  <testcase name="withdraw_checking_above_max()" classname="banking.WithdrawValidatorTest" time="0.005"/>
   <testcase name="withdraw_half_cd_after_12_months()" classname="banking.WithdrawValidatorTest" time="0.001"/>
   <testcase name="withdraw_savings()" classname="banking.WithdrawValidatorTest" time="0.0"/>
-  <testcase name="withdraw_checking_case_insensitive()" classname="banking.WithdrawValidatorTest" time="0.001"/>
+  <testcase name="withdraw_checking_case_insensitive()" classname="banking.WithdrawValidatorTest" time="0.004"/>
   <testcase name="withdraw_invalid_id()" classname="banking.WithdrawValidatorTest" time="0.001"/>
   <testcase name="withdraw_invalid_amount()" classname="banking.WithdrawValidatorTest" time="0.0"/>
-  <testcase name="withdraw_full_cd_after_12_months()" classname="banking.WithdrawValidatorTest" time="0.0"/>
-  <testcase name="withdraw_cd_too_early()" classname="banking.WithdrawValidatorTest" time="0.0"/>
-  <testcase name="withdraw_nonexistent_account()" classname="banking.WithdrawValidatorTest" time="0.0"/>
+  <testcase name="withdraw_full_cd_after_12_months()" classname="banking.WithdrawValidatorTest" time="0.005"/>
+  <testcase name="withdraw_cd_too_early()" classname="banking.WithdrawValidatorTest" time="0.002"/>
+  <testcase name="withdraw_nonexistent_account()" classname="banking.WithdrawValidatorTest" time="0.001"/>
   <testcase name="withdraw_missing_withdraw()" classname="banking.WithdrawValidatorTest" time="0.001"/>
-  <testcase name="withdraw_alphanumeric_amount()" classname="banking.WithdrawValidatorTest" time="0.002"/>
-  <testcase name="withdraw_missing_id()" classname="banking.WithdrawValidatorTest" time="0.0"/>
+  <testcase name="withdraw_alphanumeric_amount()" classname="banking.WithdrawValidatorTest" time="0.0"/>
+  <testcase name="withdraw_missing_id()" classname="banking.WithdrawValidatorTest" time="0.001"/>
   <testcase name="withdraw_negative_amount()" classname="banking.WithdrawValidatorTest" time="0.0"/>
-  <testcase name="withdraw_checking_over_balance()" classname="banking.WithdrawValidatorTest" time="0.004"/>
-  <testcase name="withdraw_checking()" classname="banking.WithdrawValidatorTest" time="0.003"/>
-  <testcase name="withdraw_missing_amount()" classname="banking.WithdrawValidatorTest" time="0.0"/>
-  <testcase name="withdraw_savings_above_max()" classname="banking.WithdrawValidatorTest" time="0.002"/>
+  <testcase name="withdraw_checking_over_balance()" classname="banking.WithdrawValidatorTest" time="0.002"/>
+  <testcase name="withdraw_checking()" classname="banking.WithdrawValidatorTest" time="0.002"/>
+  <testcase name="withdraw_missing_amount()" classname="banking.WithdrawValidatorTest" time="0.001"/>
+  <testcase name="withdraw_savings_above_max()" classname="banking.WithdrawValidatorTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

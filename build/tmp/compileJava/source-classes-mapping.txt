@@ -1,11 +1,3 @@
-banking/CheckingAccount.java
- banking.CheckingAccount
-banking/CDAccount.java
- banking.CDAccount
-banking/SavingsAccount.java
- banking.SavingsAccount
-banking/Account.java
- banking.Account
 banking/Processor.java
  banking.Processor
 banking/CDCreateValidator.java
@@ -14,6 +6,8 @@ banking/MasterControl.java
  banking.MasterControl
 banking/CommandProcessor.java
  banking.CommandProcessor
+banking/CDAccount.java
+ banking.CDAccount
 banking/AccountFactory.java
  banking.AccountFactory
 banking/WithdrawValidator.java
@@ -30,6 +24,8 @@ banking/CreateProcessor.java
  banking.CreateProcessor
 banking/PassTimeValidator.java
  banking.PassTimeValidator
+banking/SavingsAccount.java
+ banking.SavingsAccount
 banking/Validator.java
  banking.Validator
 banking/CommandValidator.java
@@ -38,6 +34,10 @@ banking/TransferProcessor.java
  banking.TransferProcessor
 banking/CreateValidator.java
  banking.CreateValidator
+banking/CheckingAccount.java
+ banking.CheckingAccount
+banking/Account.java
+ banking.Account
 banking/WithdrawProcessor.java
  banking.WithdrawProcessor
 banking/DepositValidator.java

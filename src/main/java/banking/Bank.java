@@ -75,9 +75,7 @@ public class Bank {
     }
 
     public void transfer(int uuidOrigin, int uuidRecipient, double amount) {
-        if (amount > this.accounts.get(uuidOrigin).getAmount()) {
-            amount = this.accounts.get(uuidOrigin).getAmount();
-        }
+        amount = Math.min(amount, this.accounts.get(uuidOrigin).getAmount());
         this.accounts.get(uuidOrigin).withdraw(amount);
         this.accounts.get(uuidRecipient).deposit(amount);
     }

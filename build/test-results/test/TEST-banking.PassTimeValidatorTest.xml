@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="banking.PassTimeValidatorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2021-09-05T01:18:52" hostname="Kevins-MacBook-Pro.local" time="0.014">
+<testsuite name="banking.PassTimeValidatorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2021-09-05T02:12:40" hostname="Kevins-MacBook-Pro.local" time="0.015">
   <properties/>
   <testcase name="pass_time_1_is_valid()" classname="banking.PassTimeValidatorTest" time="0.001"/>
   <testcase name="pass_time_pass_is_missing()" classname="banking.PassTimeValidatorTest" time="0.0"/>
-  <testcase name="pass_time_over_60_is_invalid()" classname="banking.PassTimeValidatorTest" time="0.001"/>
-  <testcase name="pass_time_time_has_decimal()" classname="banking.PassTimeValidatorTest" time="0.0"/>
+  <testcase name="pass_time_over_60_is_invalid()" classname="banking.PassTimeValidatorTest" time="0.0"/>
+  <testcase name="pass_time_time_has_decimal()" classname="banking.PassTimeValidatorTest" time="0.001"/>
   <testcase name="pass_time_below_1_is_invalid()" classname="banking.PassTimeValidatorTest" time="0.0"/>
   <testcase name="pass_time_between_1_and_60()" classname="banking.PassTimeValidatorTest" time="0.001"/>
-  <testcase name="pass_time_time_is_missing()" classname="banking.PassTimeValidatorTest" time="0.004"/>
-  <testcase name="pass_time_is_case_insensitive()" classname="banking.PassTimeValidatorTest" time="0.001"/>
-  <testcase name="pass_time_time_is_alphanumeric()" classname="banking.PassTimeValidatorTest" time="0.0"/>
-  <testcase name="pass_time_60_is_valid()" classname="banking.PassTimeValidatorTest" time="0.001"/>
-  <testcase name="pass_time_non_whole_number()" classname="banking.PassTimeValidatorTest" time="0.003"/>
+  <testcase name="pass_time_time_is_missing()" classname="banking.PassTimeValidatorTest" time="0.0"/>
+  <testcase name="pass_time_is_case_insensitive()" classname="banking.PassTimeValidatorTest" time="0.0"/>
+  <testcase name="pass_time_time_is_alphanumeric()" classname="banking.PassTimeValidatorTest" time="0.002"/>
+  <testcase name="pass_time_60_is_valid()" classname="banking.PassTimeValidatorTest" time="0.003"/>
+  <testcase name="pass_time_non_whole_number()" classname="banking.PassTimeValidatorTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
